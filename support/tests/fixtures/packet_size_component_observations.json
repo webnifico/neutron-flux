@@ -1,0 +1,747 @@
+{
+  "provenance": "Field projection of lab RC4 nflux-20261017174816-df4ae9 captured results; command output omitted.",
+  "packet_size": [
+    {
+      "case": "matching-advertised-size",
+      "family": 4,
+      "status": "PASS",
+      "metrics": {
+        "expected_mtu": 1500,
+        "directions": [
+          "forward",
+          "reverse"
+        ],
+        "forward": {
+          "advertised_mtu_contract_status": "met",
+          "advertised_mtu_contract_authoritative": true,
+          "pmtud_status": "expected-size-confirmed",
+          "client_mss": 1448,
+          "server_mss": 1448,
+          "expected_max_mss": 1460,
+          "discovered_mtu": 1500,
+          "discovery_confidence": "expected-confirmed",
+          "expected_probe_classification": "success",
+          "reachable": true,
+          "fragmentation": {
+            "capability": "not-required",
+            "tested_packet_size": 1500,
+            "applicable": false,
+            "fragmentation_model": "ipv4-fragmentation-permitted",
+            "fragmentation_location": "not-observed"
+          }
+        },
+        "reverse": {
+          "advertised_mtu_contract_status": "met",
+          "advertised_mtu_contract_authoritative": true,
+          "pmtud_status": "expected-size-confirmed",
+          "client_mss": 1448,
+          "server_mss": 1448,
+          "expected_max_mss": 1460,
+          "discovered_mtu": 1500,
+          "discovery_confidence": "expected-confirmed",
+          "expected_probe_classification": "success",
+          "reachable": true,
+          "fragmentation": {
+            "capability": "not-required",
+            "tested_packet_size": 1500,
+            "applicable": false,
+            "fragmentation_model": "ipv4-fragmentation-permitted",
+            "fragmentation_location": "not-observed"
+          }
+        }
+      },
+      "saved_components": [
+        {
+          "description": "Advertised MTU and measured or local boundary evidence",
+          "observed": [
+            "met",
+            "met"
+          ],
+          "type": "mtu",
+          "verdict": "PASS"
+        },
+        {
+          "description": "Path MTU discovery behavior",
+          "observed": [
+            "expected-size-confirmed",
+            "expected-size-confirmed"
+          ],
+          "type": "pmtud",
+          "verdict": "PASS"
+        },
+        {
+          "description": "IPv4 fragmentation and reassembly behavior",
+          "observed": [
+            "not-required",
+            "not-required"
+          ],
+          "type": "ipv4-fragmentation",
+          "verdict": "PASS"
+        },
+        {
+          "description": "TCP MSS remains within the available path or route constraint.",
+          "observed": "complete",
+          "type": "tcp-mss",
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "case": "matching-advertised-size",
+      "family": 6,
+      "status": "PASS",
+      "metrics": {
+        "expected_mtu": 1500,
+        "directions": [
+          "forward",
+          "reverse"
+        ],
+        "forward": {
+          "advertised_mtu_contract_status": "met",
+          "advertised_mtu_contract_authoritative": true,
+          "pmtud_status": "expected-size-confirmed",
+          "client_mss": 1428,
+          "server_mss": 1428,
+          "expected_max_mss": 1440,
+          "discovered_mtu": 1500,
+          "discovery_confidence": "expected-confirmed",
+          "expected_probe_classification": "success",
+          "reachable": true,
+          "fragmentation": {
+            "capability": "not-required",
+            "tested_packet_size": 1500,
+            "applicable": false,
+            "fragmentation_model": "ipv6-source-fragmentation-only",
+            "fragmentation_location": "not-observed"
+          }
+        },
+        "reverse": {
+          "advertised_mtu_contract_status": "met",
+          "advertised_mtu_contract_authoritative": true,
+          "pmtud_status": "expected-size-confirmed",
+          "client_mss": 1428,
+          "server_mss": 1428,
+          "expected_max_mss": 1440,
+          "discovered_mtu": 1500,
+          "discovery_confidence": "expected-confirmed",
+          "expected_probe_classification": "success",
+          "reachable": true,
+          "fragmentation": {
+            "capability": "not-required",
+            "tested_packet_size": 1500,
+            "applicable": false,
+            "fragmentation_model": "ipv6-source-fragmentation-only",
+            "fragmentation_location": "not-observed"
+          }
+        }
+      },
+      "saved_components": [
+        {
+          "description": "Advertised MTU and measured or local boundary evidence",
+          "observed": [
+            "met",
+            "met"
+          ],
+          "type": "mtu",
+          "verdict": "PASS"
+        },
+        {
+          "description": "Path MTU discovery behavior",
+          "observed": [
+            "expected-size-confirmed",
+            "expected-size-confirmed"
+          ],
+          "type": "pmtud",
+          "verdict": "PASS"
+        },
+        {
+          "description": "IPv6 Packet Too Big and source-fragmentation behavior",
+          "observed": [
+            "not-required",
+            "not-required"
+          ],
+          "type": "ipv6-packet-too-big",
+          "verdict": "PASS"
+        },
+        {
+          "description": "TCP MSS remains within the available path or route constraint.",
+          "observed": "complete",
+          "type": "tcp-mss",
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "case": "advertised-mismatch",
+      "family": 4,
+      "status": "PASS",
+      "metrics": {
+        "expected_mtu": 1500,
+        "directions": [
+          "forward",
+          "reverse"
+        ],
+        "forward": {
+          "advertised_mtu_contract_status": "failed",
+          "advertised_mtu_contract_authoritative": true,
+          "pmtud_status": "packet-too-big-received",
+          "client_mss": 1390,
+          "server_mss": 1390,
+          "expected_max_mss": 1402,
+          "discovered_mtu": 1442,
+          "discovery_confidence": "confirmed-lower-boundary",
+          "expected_probe_classification": "packet-too-big",
+          "reachable": true,
+          "fragmentation": {
+            "capability": "supported",
+            "tested_packet_size": 1500,
+            "applicable": true,
+            "fragmentation_model": "ipv4-fragmentation-permitted",
+            "fragmentation_location": "source",
+            "no_fragment_control": {
+              "classification": "local-mtu-rejected"
+            },
+            "fragmentation_permitted": {
+              "classification": "success"
+            }
+          }
+        },
+        "reverse": {
+          "advertised_mtu_contract_status": "failed",
+          "advertised_mtu_contract_authoritative": true,
+          "pmtud_status": "packet-too-big-received",
+          "client_mss": 1390,
+          "server_mss": 1390,
+          "expected_max_mss": 1402,
+          "discovered_mtu": 1442,
+          "discovery_confidence": "confirmed-lower-boundary",
+          "expected_probe_classification": "packet-too-big",
+          "reachable": true,
+          "fragmentation": {
+            "capability": "supported",
+            "tested_packet_size": 1500,
+            "applicable": true,
+            "fragmentation_model": "ipv4-fragmentation-permitted",
+            "fragmentation_location": "source",
+            "no_fragment_control": {
+              "classification": "local-mtu-rejected"
+            },
+            "fragmentation_permitted": {
+              "classification": "success"
+            }
+          }
+        }
+      },
+      "saved_components": [
+        {
+          "description": "Advertised MTU and measured or local boundary evidence",
+          "observed": [
+            "failed",
+            "failed"
+          ],
+          "type": "mtu",
+          "verdict": "PASS"
+        },
+        {
+          "description": "Path MTU discovery behavior",
+          "observed": [
+            "packet-too-big-received",
+            "packet-too-big-received"
+          ],
+          "type": "pmtud",
+          "verdict": "PASS"
+        },
+        {
+          "description": "IPv4 fragmentation and reassembly behavior",
+          "observed": [
+            "supported",
+            "supported"
+          ],
+          "type": "ipv4-fragmentation",
+          "verdict": "PASS"
+        },
+        {
+          "description": "TCP MSS remains within the available path or route constraint.",
+          "observed": "complete",
+          "type": "tcp-mss",
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "case": "advertised-mismatch",
+      "family": 6,
+      "status": "PASS",
+      "metrics": {
+        "expected_mtu": 1500,
+        "directions": [
+          "forward",
+          "reverse"
+        ],
+        "forward": {
+          "advertised_mtu_contract_status": "failed",
+          "advertised_mtu_contract_authoritative": true,
+          "pmtud_status": "packet-too-big-received",
+          "client_mss": 1370,
+          "server_mss": 1370,
+          "expected_max_mss": 1382,
+          "discovered_mtu": 1442,
+          "discovery_confidence": "confirmed-lower-boundary",
+          "expected_probe_classification": "packet-too-big",
+          "reachable": true,
+          "fragmentation": {
+            "capability": "supported",
+            "tested_packet_size": 1500,
+            "applicable": true,
+            "fragmentation_model": "ipv6-source-fragmentation-only",
+            "fragmentation_location": "source",
+            "no_fragment_control": {
+              "classification": "local-mtu-rejected"
+            },
+            "fragmentation_permitted": {
+              "classification": "success"
+            }
+          }
+        },
+        "reverse": {
+          "advertised_mtu_contract_status": "failed",
+          "advertised_mtu_contract_authoritative": true,
+          "pmtud_status": "packet-too-big-received",
+          "client_mss": 1370,
+          "server_mss": 1370,
+          "expected_max_mss": 1382,
+          "discovered_mtu": 1442,
+          "discovery_confidence": "confirmed-lower-boundary",
+          "expected_probe_classification": "packet-too-big",
+          "reachable": true,
+          "fragmentation": {
+            "capability": "supported",
+            "tested_packet_size": 1500,
+            "applicable": true,
+            "fragmentation_model": "ipv6-source-fragmentation-only",
+            "fragmentation_location": "source",
+            "no_fragment_control": {
+              "classification": "local-mtu-rejected"
+            },
+            "fragmentation_permitted": {
+              "classification": "success"
+            }
+          }
+        }
+      },
+      "saved_components": [
+        {
+          "description": "Advertised MTU and measured or local boundary evidence",
+          "observed": [
+            "failed",
+            "failed"
+          ],
+          "type": "mtu",
+          "verdict": "PASS"
+        },
+        {
+          "description": "Path MTU discovery behavior",
+          "observed": [
+            "packet-too-big-received",
+            "packet-too-big-received"
+          ],
+          "type": "pmtud",
+          "verdict": "PASS"
+        },
+        {
+          "description": "IPv6 Packet Too Big and source-fragmentation behavior",
+          "observed": [
+            "supported",
+            "supported"
+          ],
+          "type": "ipv6-packet-too-big",
+          "verdict": "PASS"
+        },
+        {
+          "description": "TCP MSS remains within the available path or route constraint.",
+          "observed": "complete",
+          "type": "tcp-mss",
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "case": "advertised-mismatch",
+      "family": 6,
+      "status": "PASS",
+      "metrics": {
+        "expected_mtu": 1500,
+        "directions": [
+          "forward",
+          "reverse"
+        ],
+        "forward": {
+          "advertised_mtu_contract_status": "failed",
+          "advertised_mtu_contract_authoritative": true,
+          "pmtud_status": "packet-too-big-received",
+          "client_mss": 1370,
+          "server_mss": 1370,
+          "expected_max_mss": 1382,
+          "discovered_mtu": 1442,
+          "discovery_confidence": "confirmed-lower-boundary",
+          "expected_probe_classification": "packet-too-big",
+          "reachable": true,
+          "fragmentation": {
+            "capability": "supported",
+            "tested_packet_size": 1500,
+            "applicable": true,
+            "fragmentation_model": "ipv6-source-fragmentation-only",
+            "fragmentation_location": "source",
+            "no_fragment_control": {
+              "classification": "local-mtu-rejected"
+            },
+            "fragmentation_permitted": {
+              "classification": "success"
+            }
+          }
+        },
+        "reverse": {
+          "advertised_mtu_contract_status": "failed",
+          "advertised_mtu_contract_authoritative": true,
+          "pmtud_status": "packet-too-big-received",
+          "client_mss": 1370,
+          "server_mss": 1370,
+          "expected_max_mss": 1382,
+          "discovered_mtu": 1442,
+          "discovery_confidence": "confirmed-lower-boundary",
+          "expected_probe_classification": "packet-too-big",
+          "reachable": true,
+          "fragmentation": {
+            "capability": "supported",
+            "tested_packet_size": 1500,
+            "applicable": true,
+            "fragmentation_model": "ipv6-source-fragmentation-only",
+            "fragmentation_location": "source",
+            "no_fragment_control": {
+              "classification": "local-mtu-rejected"
+            },
+            "fragmentation_permitted": {
+              "classification": "success"
+            }
+          }
+        }
+      },
+      "saved_components": [
+        {
+          "description": "Advertised MTU and measured or local boundary evidence",
+          "observed": [
+            "failed",
+            "failed"
+          ],
+          "type": "mtu",
+          "verdict": "PASS"
+        },
+        {
+          "description": "Path MTU discovery behavior",
+          "observed": [
+            "packet-too-big-received",
+            "packet-too-big-received"
+          ],
+          "type": "pmtud",
+          "verdict": "PASS"
+        },
+        {
+          "description": "IPv6 Packet Too Big and source-fragmentation behavior",
+          "observed": [
+            "supported",
+            "supported"
+          ],
+          "type": "ipv6-packet-too-big",
+          "verdict": "PASS"
+        },
+        {
+          "description": "TCP MSS remains within the available path or route constraint.",
+          "observed": "complete",
+          "type": "tcp-mss",
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "case": "advertised-mismatch",
+      "family": 4,
+      "status": "PASS",
+      "metrics": {
+        "expected_mtu": 1500,
+        "directions": [
+          "forward",
+          "reverse"
+        ],
+        "forward": {
+          "advertised_mtu_contract_status": "failed",
+          "advertised_mtu_contract_authoritative": true,
+          "pmtud_status": "packet-too-big-received",
+          "client_mss": 1390,
+          "server_mss": 1390,
+          "expected_max_mss": 1402,
+          "discovered_mtu": 1442,
+          "discovery_confidence": "confirmed-lower-boundary",
+          "expected_probe_classification": "packet-too-big",
+          "reachable": true,
+          "fragmentation": {
+            "capability": "supported",
+            "tested_packet_size": 1500,
+            "applicable": true,
+            "fragmentation_model": "ipv4-fragmentation-permitted",
+            "fragmentation_location": "source",
+            "no_fragment_control": {
+              "classification": "local-mtu-rejected"
+            },
+            "fragmentation_permitted": {
+              "classification": "success"
+            }
+          }
+        },
+        "reverse": {
+          "advertised_mtu_contract_status": "failed",
+          "advertised_mtu_contract_authoritative": true,
+          "pmtud_status": "packet-too-big-received",
+          "client_mss": 1390,
+          "server_mss": 1390,
+          "expected_max_mss": 1402,
+          "discovered_mtu": 1442,
+          "discovery_confidence": "confirmed-lower-boundary",
+          "expected_probe_classification": "packet-too-big",
+          "reachable": true,
+          "fragmentation": {
+            "capability": "supported",
+            "tested_packet_size": 1500,
+            "applicable": true,
+            "fragmentation_model": "ipv4-fragmentation-permitted",
+            "fragmentation_location": "source",
+            "no_fragment_control": {
+              "classification": "local-mtu-rejected"
+            },
+            "fragmentation_permitted": {
+              "classification": "success"
+            }
+          }
+        }
+      },
+      "saved_components": [
+        {
+          "description": "Advertised MTU and measured or local boundary evidence",
+          "observed": [
+            "failed",
+            "failed"
+          ],
+          "type": "mtu",
+          "verdict": "PASS"
+        },
+        {
+          "description": "Path MTU discovery behavior",
+          "observed": [
+            "packet-too-big-received",
+            "packet-too-big-received"
+          ],
+          "type": "pmtud",
+          "verdict": "PASS"
+        },
+        {
+          "description": "IPv4 fragmentation and reassembly behavior",
+          "observed": [
+            "supported",
+            "supported"
+          ],
+          "type": "ipv4-fragmentation",
+          "verdict": "PASS"
+        },
+        {
+          "description": "TCP MSS remains within the available path or route constraint.",
+          "observed": "complete",
+          "type": "tcp-mss",
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "case": "tested-fragment-not-delivered",
+      "family": 4,
+      "status": "PASS",
+      "metrics": {
+        "expected_mtu": 1442,
+        "directions": [
+          "forward"
+        ],
+        "forward": {
+          "advertised_mtu_contract_status": "met",
+          "advertised_mtu_contract_authoritative": true,
+          "pmtud_status": "expected-size-confirmed",
+          "client_mss": 1390,
+          "server_mss": 1390,
+          "expected_max_mss": 1402,
+          "discovered_mtu": 1442,
+          "discovery_confidence": "expected-confirmed",
+          "expected_probe_classification": "success",
+          "reachable": true,
+          "fragmentation": {
+            "capability": "not-supported",
+            "tested_packet_size": 1500,
+            "applicable": true,
+            "fragmentation_model": "ipv4-fragmentation-permitted",
+            "fragmentation_location": "fragmented-delivery-not-observed",
+            "no_fragment_control": {
+              "classification": "local-mtu-rejected"
+            },
+            "fragmentation_permitted": {
+              "classification": "no-reply"
+            }
+          }
+        }
+      },
+      "saved_components": [
+        {
+          "description": "Advertised MTU and measured or local boundary evidence",
+          "observed": [
+            "met"
+          ],
+          "type": "mtu",
+          "verdict": "PASS"
+        },
+        {
+          "description": "Path MTU discovery behavior",
+          "observed": [
+            "expected-size-confirmed"
+          ],
+          "type": "pmtud",
+          "verdict": "PASS"
+        },
+        {
+          "description": "IPv4 fragmentation and reassembly behavior",
+          "observed": [
+            "not-supported"
+          ],
+          "type": "ipv4-fragmentation",
+          "verdict": "PASS"
+        },
+        {
+          "description": "TCP MSS remains within the available path or route constraint.",
+          "observed": "complete",
+          "type": "tcp-mss",
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "case": "tested-fragment-not-delivered",
+      "family": 4,
+      "status": "PASS",
+      "metrics": {
+        "expected_mtu": 1442,
+        "directions": [
+          "forward"
+        ],
+        "forward": {
+          "advertised_mtu_contract_status": "met",
+          "advertised_mtu_contract_authoritative": true,
+          "pmtud_status": "expected-size-confirmed",
+          "client_mss": 1390,
+          "server_mss": 1390,
+          "expected_max_mss": 1402,
+          "discovered_mtu": 1442,
+          "discovery_confidence": "expected-confirmed",
+          "expected_probe_classification": "success",
+          "reachable": true,
+          "fragmentation": {
+            "capability": "not-supported",
+            "tested_packet_size": 1500,
+            "applicable": true,
+            "fragmentation_model": "ipv4-fragmentation-permitted",
+            "fragmentation_location": "fragmented-delivery-not-observed",
+            "no_fragment_control": {
+              "classification": "local-mtu-rejected"
+            },
+            "fragmentation_permitted": {
+              "classification": "no-reply"
+            }
+          }
+        }
+      },
+      "saved_components": [
+        {
+          "description": "Advertised MTU and measured or local boundary evidence",
+          "observed": [
+            "met"
+          ],
+          "type": "mtu",
+          "verdict": "PASS"
+        },
+        {
+          "description": "Path MTU discovery behavior",
+          "observed": [
+            "expected-size-confirmed"
+          ],
+          "type": "pmtud",
+          "verdict": "PASS"
+        },
+        {
+          "description": "IPv4 fragmentation and reassembly behavior",
+          "observed": [
+            "not-supported"
+          ],
+          "type": "ipv4-fragmentation",
+          "verdict": "PASS"
+        },
+        {
+          "description": "TCP MSS remains within the available path or route constraint.",
+          "observed": "complete",
+          "type": "tcp-mss",
+          "verdict": "PASS"
+        }
+      ]
+    }
+  ],
+  "partial_udp_comparisons": [
+    {
+      "status": "PASS",
+      "metrics": {
+        "forward_idle_p95_ms": 0.7899500000000002,
+        "forward_tcp_mbps": 1122.4114779784782,
+        "forward_worst_udp_loss_pct": 0.0,
+        "health": "warning",
+        "latency_difference_pct": 20.944363567314394,
+        "latency_health": "good",
+        "reverse_idle_p95_ms": 0.6245,
+        "reverse_tcp_mbps": 1111.5159572017978,
+        "reverse_worst_udp_loss_pct": 0.0,
+        "tcp_health": "good",
+        "throughput_difference_pct": 0.9707242834244458,
+        "udp_compared_profiles": 3,
+        "udp_comparison_scope": "partial-eligible-matched-packet-size-and-rate",
+        "udp_health": "warning",
+        "udp_loss_difference_pct_points": 0.0,
+        "udp_packet_size_rejected_profiles": 1,
+        "udp_unmatched_profiles": 1
+      }
+    },
+    {
+      "status": "PASS",
+      "metrics": {
+        "forward_idle_p95_ms": 0.6206,
+        "forward_tcp_mbps": 1108.7378713046758,
+        "forward_worst_udp_loss_pct": 0.0,
+        "health": "warning",
+        "latency_difference_pct": 17.109656738346466,
+        "latency_health": "good",
+        "reverse_idle_p95_ms": 0.7487,
+        "reverse_tcp_mbps": 1104.6509516011579,
+        "reverse_worst_udp_loss_pct": 0.0,
+        "tcp_health": "good",
+        "throughput_difference_pct": 0.36861009344875284,
+        "udp_compared_profiles": 3,
+        "udp_comparison_scope": "partial-eligible-matched-packet-size-and-rate",
+        "udp_health": "warning",
+        "udp_loss_difference_pct_points": 0.0,
+        "udp_packet_size_rejected_profiles": 1,
+        "udp_unmatched_profiles": 1
+      }
+    }
+  ],
+  "source_sha256": "09b7acef641e7d068deb84e9442c1dd6bcf8390611695a1b41e383604fd4d215",
+  "projection_note": "Only packet-size component fields, saved component annotations and directional comparison metrics are retained. Cloud resource identifiers and command output are omitted."
+}
