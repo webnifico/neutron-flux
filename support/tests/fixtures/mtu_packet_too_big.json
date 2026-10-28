@@ -1,0 +1,12 @@
+{
+  "first_trial": {
+    "returncode": 1,
+    "stdout": "PING 192.0.2.20 (192.0.2.20) from 192.0.2.10 : 1472(1500) bytes of data.\nFrom 192.0.2.20 icmp_seq=1 Frag needed and DF set (mtu = 1442)\n\n--- 192.0.2.20 ping statistics ---\n1 packets transmitted, 0 received, +1 errors, 100% packet loss, time 0ms\n",
+    "stderr": ""
+  },
+  "cached_trial": {
+    "returncode": 1,
+    "stdout": "PING 192.0.2.20 (192.0.2.20) from 192.0.2.10 : 1472(1500) bytes of data.\n\n--- 192.0.2.20 ping statistics ---\n1 packets transmitted, 0 received, +1 errors, 100% packet loss, time 0ms\n",
+    "stderr": "ping: sendmsg: Message too long\n"
+  }
+}

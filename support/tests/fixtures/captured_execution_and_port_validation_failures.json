@@ -1,0 +1,357 @@
+{
+  "source_run_id": "captured-execution-and-port-validation",
+  "source_results_sha256": "0ac1e5f849396928c99c7c8da05fdeba0c386cde84f8985e097a8862d9ede1f5",
+  "note": "Captured port completion and traffic summary excerpts with synthetic resource, run, host, zone and address identities; statuses, timings and measured values are preserved. High-volume raw probe samples and unrelated fields are omitted.",
+  "results": [
+    {
+      "test_id": "AZ-AZ-TEST1-EGRESS-6-provider-network",
+      "status": "FAIL",
+      "category": "egress",
+      "expected": "reachable",
+      "observed": "blocked",
+      "message": "automatic public targets are treated as required external reachability checks",
+      "family": 6,
+      "details": {
+        "protocol": "icmp"
+      }
+    },
+    {
+      "test_id": "AZ-AZ-TEST1-EGRESS-6-project-network",
+      "status": "FAIL",
+      "category": "egress",
+      "expected": "reachable",
+      "observed": "blocked",
+      "message": "automatic public targets are treated as required external reachability checks",
+      "family": 6,
+      "details": {
+        "protocol": "icmp"
+      }
+    },
+    {
+      "test_id": "AZ-AZ-TEST1-EGRESS-6-provider-network-AFTER-SERVER-START",
+      "status": "FAIL",
+      "category": "egress",
+      "expected": "reachable",
+      "observed": "blocked",
+      "message": "automatic public targets are treated as required external reachability checks",
+      "family": 6,
+      "details": {
+        "protocol": "icmp"
+      }
+    },
+    {
+      "test_id": "AZ-AZ-TEST1-PLACEMENT-PORT-BINDING-INTRA-COMPUTE-pair-a-b",
+      "status": "FAIL",
+      "category": "compute-placement",
+      "expected": "bound-to-destination",
+      "observed": "binding-invalid",
+      "message": "Neutron ports did not become ACTIVE and bind to destination host compute-b: {'00000000-0000-4000-8000-000000000004': {'binding_host_id': 'compute-b', 'status': 'DOWN'}, '00000000-0000-4000-8000-000000000002': {'binding_host_id': 'compute-b', 'status': 'ACTIVE'}}",
+      "family": null,
+      "details": {
+        "completion_assessment": {
+          "checks": {
+            "endpoint_ready": true,
+            "guest_marker_verified": true,
+            "handoff_confirmed": true,
+            "migration_record_verified": true,
+            "placement_verified": true,
+            "port_binding_verified": false,
+            "task_state_cleared": true,
+            "volume_attachment_verified": true
+          },
+          "failed_checks": [
+            "port_binding_verified"
+          ],
+          "missing_checks": [],
+          "resubmission_permitted": false,
+          "status": "FAIL",
+          "verified": false
+        },
+        "migration_record": {
+          "Created At": "2026-10-17T07:47:05.000000",
+          "Dest Compute": "compute-b",
+          "Dest Host": "192.0.2.22",
+          "Dest Node": "compute-b.example.invalid",
+          "Id": 1001,
+          "New Flavor": 15,
+          "Old Flavor": 15,
+          "Server UUID": "00000000-0000-4000-8000-000000000003",
+          "Source Compute": "compute-a",
+          "Source Node": "compute-a.example.invalid",
+          "Status": "completed",
+          "Type": "live-migration",
+          "Updated At": "2026-10-17T07:47:44.000000",
+          "validation_observations": [
+            {
+              "elapsed_s": 1.7141446580644697,
+              "record_id": "1001",
+              "status": "completed"
+            }
+          ]
+        },
+        "nova_lifecycle_assessment": {
+          "checks": {
+            "endpoint_ready": true,
+            "guest_marker_verified": true,
+            "handoff_confirmed": true,
+            "migration_record_verified": true,
+            "placement_verified": true,
+            "port_binding_verified": true,
+            "task_state_cleared": true,
+            "volume_attachment_verified": true
+          },
+          "failed_checks": [],
+          "missing_checks": [],
+          "resubmission_permitted": false,
+          "status": "PASS",
+          "verified": true
+        },
+        "ports": {
+          "00000000-0000-4000-8000-000000000002": {
+            "binding_host_id": "compute-b",
+            "device_id": "00000000-0000-4000-8000-000000000003",
+            "fixed_ips": {
+              "00000000-0000-4000-8000-000000000005": "2001:db8:1::104"
+            },
+            "mac_address": "02:00:00:00:00:11",
+            "role": "test",
+            "security_groups": [
+              "00000000-0000-4000-8000-000000000008"
+            ],
+            "status": "ACTIVE"
+          },
+          "00000000-0000-4000-8000-000000000004": {
+            "binding_host_id": "compute-b",
+            "device_id": "00000000-0000-4000-8000-000000000003",
+            "fixed_ips": {
+              "00000000-0000-4000-8000-000000000006": "192.0.2.21"
+            },
+            "mac_address": "02:00:00:00:00:12",
+            "role": "management",
+            "security_groups": [
+              "00000000-0000-4000-8000-000000000001"
+            ],
+            "status": "DOWN"
+          }
+        },
+        "continuity": {
+          "completion_assessment": {
+            "checks": {
+              "endpoint_ready": true,
+              "guest_marker_verified": true,
+              "migration_record_verified": true,
+              "placement_verified": true,
+              "port_binding_verified": false,
+              "task_state_cleared": true,
+              "volume_attachment_verified": true
+            },
+            "failed_checks": [
+              "port_binding_verified"
+            ],
+            "missing_checks": [],
+            "resubmission_permitted": false,
+            "status": "FAIL",
+            "verified": false
+          },
+          "icmp": {
+            "lost": 0,
+            "samples": 1000
+          },
+          "tcp": {
+            "survived": true,
+            "connected": true
+          },
+          "udp": {
+            "response": {
+              "application_received": 5007,
+              "duplicates": 0,
+              "elapsed_s": 250.375789502,
+              "finalization_grace_s": 0.5,
+              "instance_id": "00000000000000000000000000000001",
+              "jitter_ms": 0.09225065690609946,
+              "local_ip": "2001:db8:1::104",
+              "loss_pct": 0.019968051118210862,
+              "lost": 1,
+              "max_sequence": 5007,
+              "mbps": 0.02047789049491562,
+              "out_of_order": 0,
+              "out_of_order_pct": 0.0,
+              "peer_ip": "2001:db8:1::84",
+              "pps": 19.997939936441036,
+              "probe_id": "00000000-0000-4000-8000-000000000003",
+              "received": 5007,
+              "received_bitmap_hex": "fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+              "receiver_active_elapsed_s": 250.31762923,
+              "receiver_drop_attribution": "no-receiver-kernel-drop-evidence-observed",
+              "receiver_drop_attribution_scope": "shared-receiver-socket-and-guest-wide-kernel-counters",
+              "receiver_kernel_udp_counter_scope": "guest-wide-/proc/net/snmp6",
+              "receiver_kernel_udp_deltas": {
+                "InErrors": 0,
+                "RcvbufErrors": 0
+              },
+              "receiver_socket_rxq_overflow": 0,
+              "receiver_socket_rxq_overflow_scope": "shared-probe-socket-cumulative-delta",
+              "sender_elapsed_s": 250.375789502,
+              "sent": 5008,
+              "sequence_bitmap_complete": true,
+              "session_id": 987654321,
+              "socket_dequeued": 5007,
+              "wire_received": 5007
+            }
+          }
+        }
+      }
+    },
+    {
+      "test_id": "AZ-AZ-TEST1-PLACEMENT-LIVE-MIGRATION-INTRA-COMPUTE-pair-a-b",
+      "status": "FAIL",
+      "category": "compute-placement",
+      "expected": "live-migration-complete",
+      "observed": "migration-validation-failed",
+      "message": "Live migration moved IPv6 project networks from External IPv6 on one Neutron router [az-test1]:B from compute-a to compute-b using shared/volume-backed live migration (boot_storage=volume, configured_migration_storage=auto, effective_migration_storage=shared)",
+      "family": null,
+      "details": {
+        "completion_assessment": {
+          "checks": {
+            "endpoint_ready": true,
+            "guest_marker_verified": true,
+            "handoff_confirmed": true,
+            "migration_record_verified": true,
+            "placement_verified": true,
+            "port_binding_verified": false,
+            "task_state_cleared": true,
+            "volume_attachment_verified": true
+          },
+          "failed_checks": [
+            "port_binding_verified"
+          ],
+          "missing_checks": [],
+          "resubmission_permitted": false,
+          "status": "FAIL",
+          "verified": false
+        },
+        "port_validation_error": "Neutron ports did not become ACTIVE and bind to destination host compute-b: {'00000000-0000-4000-8000-000000000004': {'binding_host_id': 'compute-b', 'status': 'DOWN'}, '00000000-0000-4000-8000-000000000002': {'binding_host_id': 'compute-b', 'status': 'ACTIVE'}}",
+        "source_host": "compute-a",
+        "destination_host": "compute-b",
+        "migration_record_verified": true,
+        "port_binding_verified": false
+      }
+    },
+    {
+      "test_id": "AZ-AZ-TEST1-PLACEMENT-LIVE-CONTINUITY-INTRA-COMPUTE-pair-a-b",
+      "status": "FAIL",
+      "category": "compute-placement",
+      "expected": "traffic-continuity-measured",
+      "observed": "traffic-interrupted",
+      "message": "VM placement=PASS; migration completion=FAIL; Long-lived TCP connected=True, survived=True; ICMP failed observations 0/1000 (0.00%), no failed ICMP observation run; sequenced UDP application-delivery loss=0.02%; recovery=True (independent final ICMP and receiver-side UDP sequence evidence); the migration did not complete successfully; interruption tolerance=PASS (ICMP failed observations <= 1%, UDP delivery loss <= 1%, sampled failed-observation span <= 1s; ready-through-post-migration)",
+      "family": null,
+      "details": {
+        "completion_assessment": {
+          "checks": {
+            "endpoint_ready": true,
+            "guest_marker_verified": true,
+            "migration_record_verified": true,
+            "placement_verified": true,
+            "port_binding_verified": false,
+            "task_state_cleared": true,
+            "volume_attachment_verified": true
+          },
+          "failed_checks": [
+            "port_binding_verified"
+          ],
+          "missing_checks": [],
+          "resubmission_permitted": false,
+          "status": "FAIL",
+          "verified": false
+        },
+        "migration_outcomes": {
+          "interruption_tolerance": "PASS",
+          "migration_completion": "FAIL",
+          "tcp_session": "PASS",
+          "traffic_recovery": "PASS",
+          "vm_placement": "PASS"
+        },
+        "packet_loss_is_advisory_after_recovery": false,
+        "evaluated_thresholds": {
+          "icmp_loss_pct": 1.0,
+          "outage_lower_bound_s": 1.0,
+          "udp_loss_pct": 1.0
+        },
+        "continuity_failure_reasons": [
+          "the migration did not complete successfully"
+        ],
+        "transport_failure_reasons": [
+          "the migration did not complete successfully"
+        ],
+        "tolerance_failure_reasons": [],
+        "icmp": {
+          "lost": 0,
+          "samples": 1000
+        },
+        "tcp": {
+          "survived": true,
+          "connected": true
+        },
+        "udp": {
+          "response": {
+            "application_received": 5007,
+            "duplicates": 0,
+            "elapsed_s": 250.375789502,
+            "finalization_grace_s": 0.5,
+            "instance_id": "00000000000000000000000000000001",
+            "jitter_ms": 0.09225065690609946,
+            "local_ip": "2001:db8:1::104",
+            "loss_pct": 0.019968051118210862,
+            "lost": 1,
+            "max_sequence": 5007,
+            "mbps": 0.02047789049491562,
+            "out_of_order": 0,
+            "out_of_order_pct": 0.0,
+            "peer_ip": "2001:db8:1::84",
+            "pps": 19.997939936441036,
+            "probe_id": "00000000-0000-4000-8000-000000000003",
+            "received": 5007,
+            "received_bitmap_hex": "fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+            "receiver_active_elapsed_s": 250.31762923,
+            "receiver_drop_attribution": "no-receiver-kernel-drop-evidence-observed",
+            "receiver_drop_attribution_scope": "shared-receiver-socket-and-guest-wide-kernel-counters",
+            "receiver_kernel_udp_counter_scope": "guest-wide-/proc/net/snmp6",
+            "receiver_kernel_udp_deltas": {
+              "InErrors": 0,
+              "RcvbufErrors": 0
+            },
+            "receiver_socket_rxq_overflow": 0,
+            "receiver_socket_rxq_overflow_scope": "shared-probe-socket-cumulative-delta",
+            "sender_elapsed_s": 250.375789502,
+            "sent": 5008,
+            "sequence_bitmap_complete": true,
+            "session_id": 987654321,
+            "socket_dequeued": 5007,
+            "wire_received": 5007
+          }
+        }
+      }
+    }
+  ],
+  "setup_failures": [
+    {
+      "details": {
+        "availability_zone": "az-test1",
+        "blocked_descendant_count": 111,
+        "execution_scope": "az-az-test1",
+        "failure_phase": "per-zone-execution",
+        "root_setup_result_id": "AZ-AZ-TEST1-LANE-EXECUTION-ERROR",
+        "tool_failure": true
+      },
+      "message": "[az-az-test1] Execution failed in availability zone az-test1: SuiteError: Endpoint group one-router-project-networks-ipv6-00000000-0000-4000-8000-000000000007@az-test1 could not be fully released; later endpoint batches were not started",
+      "timestamp": "2026-10-17T07:54:16.406453Z"
+    }
+  ],
+  "planned_outcomes": {
+    "BLOCKED": 467,
+    "ERROR": 4,
+    "FAILED": 6,
+    "PASSED": 361,
+    "UNVERIFIED": 4
+  }
+}

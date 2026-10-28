@@ -1,0 +1,2151 @@
+{
+  "provenance": {
+    "run_id": "nflux-20000101000003-000003",
+    "source_file": "Anonymized captured regression input",
+    "scope": "Anonymized captured regression input; measured values are unchanged. Source hashes identify the original capture before anonymization. Endpoint, migration and planner fields only; probe payloads omitted."
+  },
+  "results": [
+    {
+      "authoritative": true,
+      "category": "same-subnet",
+      "destination": "Provider Provider One:B (198.51.100.226)",
+      "details": {
+        "address_path": {
+          "destination": {
+            "association": {},
+            "fixed_ip": "198.51.100.226",
+            "fixed_ips": {
+              "cd802e34-fed2-5a3b-9205-47ea912fad5a": "2001:db8:11::1:0:231",
+              "2ad1d8f8-4e12-52db-9a01-218e93cdc418": "198.51.100.226"
+            },
+            "floating_ip": null,
+            "floating_ip_id": null,
+            "floating_ip_status": "none allocated",
+            "port_id": "accf55f2-014b-5d6a-b416-d458c5ed4bf7",
+            "probe_address": "198.51.100.226",
+            "server_id": "60c8d6c1-b2df-5513-a500-925ea2176f1c"
+          },
+          "observed_source_ip": null,
+          "source": {
+            "association": {},
+            "fixed_ip": "198.51.100.187",
+            "fixed_ips": {
+              "cd802e34-fed2-5a3b-9205-47ea912fad5a": "2001:db8:11::1:0:177",
+              "2ad1d8f8-4e12-52db-9a01-218e93cdc418": "198.51.100.187"
+            },
+            "floating_ip": null,
+            "floating_ip_id": null,
+            "floating_ip_status": "none allocated",
+            "port_id": "f9a4e474-4e95-5581-9e5c-c7e0cc8676ba",
+            "probe_address": "198.51.100.187",
+            "server_id": "d58c4269-a528-5b88-949d-f30c0e396966"
+          }
+        },
+        "destination_availability_zone": "zone-a",
+        "destination_compute_host": "compute-d",
+        "destination_server_id": "60c8d6c1-b2df-5513-a500-925ea2176f1c",
+        "destination_side": "B",
+        "pair_placement": "initial",
+        "pair_placement_policy": "initial-opposite-v1",
+        "placement_origin": "initial-boot",
+        "planned_check_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-SAME-4-provider-4443aa01-d6bf-51-6d5d40c9-f7412e8-d799b62c-A-B-TCP",
+        "protocol": "tcp",
+        "source_availability_zone": "zone-a",
+        "source_compute_host": "compute-c",
+        "source_server_id": "d58c4269-a528-5b88-949d-f30c0e396966",
+        "source_side": "A"
+      },
+      "display_name": "Provider subnet connectivity — IPv4 A to B TCP",
+      "duration_ms": 1269,
+      "expected": "reachable",
+      "family": 4,
+      "likely_failure": null,
+      "message": "the source and destination use the same Neutron subnet",
+      "observed": "reachable",
+      "scenario": "Provider subnet connectivity",
+      "source": "Provider Provider One:A (198.51.100.187)",
+      "started_at": "2026-10-09T07:48:06.953464+00:00",
+      "status": "PASS",
+      "test_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-SAME-4-provider-4443aa01-d6bf-51-6d5d40c9-f7412e8-d799b62c-A-B-TCP"
+    },
+    {
+      "authoritative": true,
+      "category": "network-performance",
+      "destination": "Provider Provider One:B (198.51.100.226)",
+      "details": {
+        "address_path": {
+          "destination": {
+            "association": {},
+            "fixed_ip": "198.51.100.226",
+            "fixed_ips": {
+              "cd802e34-fed2-5a3b-9205-47ea912fad5a": "2001:db8:11::1:0:231",
+              "2ad1d8f8-4e12-52db-9a01-218e93cdc418": "198.51.100.226"
+            },
+            "floating_ip": null,
+            "floating_ip_id": null,
+            "floating_ip_status": "none allocated",
+            "port_id": "accf55f2-014b-5d6a-b416-d458c5ed4bf7",
+            "probe_address": "198.51.100.226",
+            "server_id": "60c8d6c1-b2df-5513-a500-925ea2176f1c"
+          },
+          "observed_source_ip": null,
+          "source": {
+            "association": {},
+            "fixed_ip": "198.51.100.187",
+            "fixed_ips": {
+              "cd802e34-fed2-5a3b-9205-47ea912fad5a": "2001:db8:11::1:0:177",
+              "2ad1d8f8-4e12-52db-9a01-218e93cdc418": "198.51.100.187"
+            },
+            "floating_ip": null,
+            "floating_ip_id": null,
+            "floating_ip_status": "none allocated",
+            "port_id": "f9a4e474-4e95-5581-9e5c-c7e0cc8676ba",
+            "probe_address": "198.51.100.187",
+            "server_id": "d58c4269-a528-5b88-949d-f30c0e396966"
+          }
+        },
+        "measurement": "tcp-throughput",
+        "pair_placement": "initial",
+        "pair_placement_policy": "initial-opposite-v1",
+        "path": {
+          "destination_availability_zone": "zone-a",
+          "destination_compute_host": "compute-d",
+          "destination_ip": "198.51.100.226",
+          "destination_label": "Provider Provider One:B",
+          "family": 4,
+          "path_kind": "endpoint",
+          "placement": "cross-compute",
+          "source_availability_zone": "zone-a",
+          "source_category": "same-subnet",
+          "source_compute_host": "compute-c",
+          "source_ip": "198.51.100.187",
+          "source_label": "Provider Provider One:A",
+          "source_spec_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-SAME-4-provider-4443aa01-d6bf-51-6d5d40c9-f7412e8-d799b62c-A-B-TCP",
+          "stage": "group-local"
+        },
+        "planned_check_id": "CHECK-PERFORMANCE-9f147026110f120743c72e7c"
+      },
+      "display_name": "TCP throughput",
+      "duration_ms": 33360,
+      "expected": "tcp-throughput-profile-recorded",
+      "family": 4,
+      "likely_failure": null,
+      "message": "forward single-stream median 1188.4 Mbps; reverse single-stream median 1156.6 Mbps; bidirectional aggregate 2415.7 Mbps; assessment=good",
+      "observed": "tcp-throughput-profile-measured",
+      "scenario": "Network path performance",
+      "source": "Provider Provider One:A (198.51.100.187)",
+      "started_at": "2026-10-09T07:48:34.452003Z",
+      "status": "PASS",
+      "test_id": "PERF-GROUP-LOCAL-SAME-SUBNET-IPV4-HQ-COMPUTE-C-TO-COMPUTE-D-60DDD316-TCP-THROUGHPUT"
+    },
+    {
+      "authoritative": true,
+      "category": "egress",
+      "destination": "1.1.1.1",
+      "details": {
+        "address_path": {
+          "observed_source_ip": null,
+          "source": {
+            "association": {},
+            "fixed_ip": "198.51.100.187",
+            "fixed_ips": {
+              "cd802e34-fed2-5a3b-9205-47ea912fad5a": "2001:db8:11::1:0:177",
+              "2ad1d8f8-4e12-52db-9a01-218e93cdc418": "198.51.100.187"
+            },
+            "floating_ip": null,
+            "floating_ip_id": null,
+            "floating_ip_status": "none allocated",
+            "port_id": "f9a4e474-4e95-5581-9e5c-c7e0cc8676ba",
+            "probe_address": "198.51.100.187",
+            "server_id": "d58c4269-a528-5b88-949d-f30c0e396966"
+          }
+        },
+        "destination_side": "A",
+        "pair_placement": "initial",
+        "pair_placement_policy": "initial-opposite-v1",
+        "placement_origin": "initial-boot",
+        "planned_check_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-EGRESS-4-provider-4443aa01-d6bf-5113-aa71--b0a59837",
+        "protocol": "icmp",
+        "source_availability_zone": "zone-a",
+        "source_compute_host": "compute-c",
+        "source_server_id": "d58c4269-a528-5b88-949d-f30c0e396966",
+        "source_side": "A"
+      },
+      "display_name": "Sampled external IPv4 reachability to 1.1.1.1",
+      "duration_ms": 2532,
+      "expected": "reachable",
+      "family": 4,
+      "likely_failure": null,
+      "message": "automatic public targets are treated as required external reachability checks",
+      "observed": "reachable",
+      "scenario": "Sampled external egress",
+      "source": "Provider Provider One:A (198.51.100.187)",
+      "started_at": "2026-10-09T07:54:30.740209+00:00",
+      "status": "PASS",
+      "test_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-EGRESS-4-provider-4443aa01-d6bf-5113-aa71--b0a59837"
+    },
+    {
+      "authoritative": true,
+      "category": "same-subnet",
+      "destination": "Provider Provider One:B (2001:db8:11::1:0:231)",
+      "details": {
+        "address_path": {
+          "destination": {
+            "association": {},
+            "fixed_ip": "2001:db8:11::1:0:231",
+            "fixed_ips": {
+              "cd802e34-fed2-5a3b-9205-47ea912fad5a": "2001:db8:11::1:0:231",
+              "2ad1d8f8-4e12-52db-9a01-218e93cdc418": "198.51.100.226"
+            },
+            "floating_ip": null,
+            "floating_ip_id": null,
+            "floating_ip_status": "none allocated",
+            "port_id": "accf55f2-014b-5d6a-b416-d458c5ed4bf7",
+            "probe_address": "2001:db8:11::1:0:231",
+            "server_id": "60c8d6c1-b2df-5513-a500-925ea2176f1c"
+          },
+          "observed_source_ip": null,
+          "source": {
+            "association": {},
+            "fixed_ip": "2001:db8:11::1:0:177",
+            "fixed_ips": {
+              "cd802e34-fed2-5a3b-9205-47ea912fad5a": "2001:db8:11::1:0:177",
+              "2ad1d8f8-4e12-52db-9a01-218e93cdc418": "198.51.100.187"
+            },
+            "floating_ip": null,
+            "floating_ip_id": null,
+            "floating_ip_status": "none allocated",
+            "port_id": "f9a4e474-4e95-5581-9e5c-c7e0cc8676ba",
+            "probe_address": "2001:db8:11::1:0:177",
+            "server_id": "d58c4269-a528-5b88-949d-f30c0e396966"
+          }
+        },
+        "check_sample": true,
+        "destination_availability_zone": "zone-a",
+        "destination_compute_host": "compute-d",
+        "destination_server_id": "60c8d6c1-b2df-5513-a500-925ea2176f1c",
+        "destination_side": "B",
+        "pair_placement": "initial",
+        "pair_placement_policy": "initial-opposite-v1",
+        "placement_origin": "initial-boot",
+        "planned_check_id": "PAIR-TRANSITION-a1c13d7c62e9da96-opposite",
+        "protocol": "tcp",
+        "source_availability_zone": "zone-a",
+        "source_compute_host": "compute-c",
+        "source_server_id": "d58c4269-a528-5b88-949d-f30c0e396966",
+        "source_side": "A"
+      },
+      "display_name": "Provider subnet connectivity — IPv6 A to B TCP — pre-migration safety round 1/1",
+      "duration_ms": 1148,
+      "expected": "reachable",
+      "family": 6,
+      "likely_failure": null,
+      "message": "the source and destination use the same Neutron subnet",
+      "observed": "reachable",
+      "scenario": "Compute migration safety barrier",
+      "source": "Provider Provider One:A (2001:db8:11::1:0:177)",
+      "started_at": "2026-10-09T07:57:21.879861+00:00",
+      "status": "PASS",
+      "test_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-SAME-6-provider-4443aa01-d6bf-51-6d5d40c9-ba18a21-4d739d93-A-B-TCP-PRE-MIGRATION-1-ROUND-1-provider-3a9-d58c4269-a52-60c8d6c1-b2d-409956c0eef5"
+    },
+    {
+      "authoritative": true,
+      "category": "same-subnet",
+      "destination": "Provider Provider One:B (198.51.100.226)",
+      "details": {
+        "address_path": {
+          "destination": {
+            "association": {},
+            "fixed_ip": "198.51.100.226",
+            "fixed_ips": {
+              "cd802e34-fed2-5a3b-9205-47ea912fad5a": "2001:db8:11::1:0:231",
+              "2ad1d8f8-4e12-52db-9a01-218e93cdc418": "198.51.100.226"
+            },
+            "floating_ip": null,
+            "floating_ip_id": null,
+            "floating_ip_status": "none allocated",
+            "port_id": "accf55f2-014b-5d6a-b416-d458c5ed4bf7",
+            "probe_address": "198.51.100.226",
+            "server_id": "60c8d6c1-b2df-5513-a500-925ea2176f1c"
+          },
+          "observed_source_ip": null,
+          "source": {
+            "association": {},
+            "fixed_ip": "198.51.100.187",
+            "fixed_ips": {
+              "cd802e34-fed2-5a3b-9205-47ea912fad5a": "2001:db8:11::1:0:177",
+              "2ad1d8f8-4e12-52db-9a01-218e93cdc418": "198.51.100.187"
+            },
+            "floating_ip": null,
+            "floating_ip_id": null,
+            "floating_ip_status": "none allocated",
+            "port_id": "f9a4e474-4e95-5581-9e5c-c7e0cc8676ba",
+            "probe_address": "198.51.100.187",
+            "server_id": "d58c4269-a528-5b88-949d-f30c0e396966"
+          }
+        },
+        "check_sample": true,
+        "destination_availability_zone": "zone-a",
+        "destination_compute_host": "compute-d",
+        "destination_server_id": "60c8d6c1-b2df-5513-a500-925ea2176f1c",
+        "destination_side": "B",
+        "pair_placement": "initial",
+        "pair_placement_policy": "initial-opposite-v1",
+        "placement_origin": "initial-boot",
+        "planned_check_id": "PAIR-TRANSITION-a1c13d7c62e9da96-opposite",
+        "protocol": "tcp",
+        "source_availability_zone": "zone-a",
+        "source_compute_host": "compute-c",
+        "source_server_id": "d58c4269-a528-5b88-949d-f30c0e396966",
+        "source_side": "A"
+      },
+      "display_name": "Provider subnet connectivity — IPv4 A to B TCP — pre-migration safety round 1/1",
+      "duration_ms": 1184,
+      "expected": "reachable",
+      "family": 4,
+      "likely_failure": null,
+      "message": "the source and destination use the same Neutron subnet",
+      "observed": "reachable",
+      "scenario": "Compute migration safety barrier",
+      "source": "Provider Provider One:A (198.51.100.187)",
+      "started_at": "2026-10-09T07:57:21.900915+00:00",
+      "status": "PASS",
+      "test_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-SAME-4-provider-4443aa01-d6bf-51-6d5d40c9-f7412e8-d799b62c-A-B-TCP-PRE-MIGRATION-1-ROUND-1-provider-3a9-d58c4269-a52-60c8d6c1-b2d-409956c0eef5"
+    },
+    {
+      "authoritative": true,
+      "category": "compute-placement",
+      "destination": "compute-d",
+      "details": {
+        "check_sample": true,
+        "planned_check_id": "PAIR-TRANSITION-a1c13d7c62e9da96-opposite",
+        "protocols": [
+          "icmp",
+          "tcp",
+          "udp"
+        ],
+        "rounds": [
+          {
+            "failed_test_ids": [],
+            "round": 1,
+            "test_ids": [
+              "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-SAME-6-provider-4443aa01-d6bf-51-6d5d40c9-ba18a21-4d739d93-A-B-TCP-PRE-MIGRATION-1-ROUND-1-provider-3a9-d58c4269-a52-60c8d6c1-b2d-409956c0eef5",
+              "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-SAME-4-provider-4443aa01-d6bf-51-6d5d40c9-f7412e8-d799b62c-A-B-TCP-PRE-MIGRATION-1-ROUND-1-provider-3a9-d58c4269-a52-60c8d6c1-b2d-409956c0eef5"
+            ]
+          }
+        ]
+      },
+      "display_name": "Verify fresh functional baseline before live migration submission 1",
+      "duration_ms": 0,
+      "expected": "fresh-functional-matrix",
+      "family": null,
+      "likely_failure": null,
+      "message": "Every selected path passed a fresh safety probe before cloud operation submission: ICMP, TCP, UDP",
+      "observed": "fresh-functional-matrix",
+      "scenario": "Compute migration safety barrier",
+      "source": "compute-c",
+      "started_at": "2026-10-09T07:57:25.739447+00:00",
+      "status": "PASS",
+      "test_id": "PLACEMENT-MIGRATION-FUNCTIONAL-BASELINE-1-provider-3a9-d58c4269-a52-60c8d6c1-b2d-bc3f4368236e"
+    },
+    {
+      "authoritative": true,
+      "category": "compute-placement",
+      "destination": "compute-c",
+      "details": {
+        "check_sample": true,
+        "confirmed": true,
+        "destination_availability_zone": "zone-a",
+        "destination_host": "compute-c",
+        "details": {
+          "continuity": {
+            "destination_ip": "198.51.100.226",
+            "family": 4,
+            "moving_server_id": "60c8d6c1-b2df-5513-a500-925ea2176f1c",
+            "observer_label": "Provider Provider One:A",
+            "observer_server_id": "d58c4269-a528-5b88-949d-f30c0e396966",
+            "source_ip": "198.51.100.187",
+            "stationary_server_id": "d58c4269-a528-5b88-949d-f30c0e396966",
+            "target_server_id": "60c8d6c1-b2df-5513-a500-925ea2176f1c"
+          }
+        },
+        "planned_check_id": "PAIR-TRANSITION-a1c13d7c62e9da96-opposite",
+        "server_id": "60c8d6c1-b2df-5513-a500-925ea2176f1c",
+        "source_availability_zone": "zone-a",
+        "source_host": "compute-d"
+      },
+      "display_name": "Live-migrate an endpoint into opposite placement — Provider Provider One:A / Provider Provider One:B",
+      "duration_ms": 0,
+      "expected": "live-migration-complete",
+      "family": null,
+      "likely_failure": null,
+      "message": "Live migration moved Provider Provider One:B from compute-d to compute-c using shared/volume-backed live migration (boot_storage=volume, configured_migration_storage=auto, effective_migration_storage=shared)",
+      "observed": "live-migration-complete",
+      "scenario": "Live migration capability",
+      "source": "compute-d",
+      "started_at": "2026-10-09T08:01:17.889707+00:00",
+      "status": "PASS",
+      "test_id": "PLACEMENT-LIVE-MIGRATION-OPPOSITE-provider-3a9-d58c4269-a52-60c8d6c1-b2d-bc3f4368236e"
+    },
+    {
+      "authoritative": true,
+      "category": "compute-placement",
+      "destination": null,
+      "details": {
+        "check_sample": true,
+        "planned_check_id": "PAIR-TRANSITION-a1c13d7c62e9da96-opposite",
+        "transition_check_id": "PAIR-TRANSITION-a1c13d7c62e9da96-opposite"
+      },
+      "display_name": "Create opposite placement using the configured migration strategy — Provider Provider One:A / Provider Provider One:B",
+      "duration_ms": 0,
+      "expected": "placement-achieved",
+      "family": null,
+      "likely_failure": null,
+      "message": "VM placement=PASS; migration completion=PASS; Long-lived TCP connected=True, survived=True; ICMP failed observations 1/577 (0.17%), 1 consecutive failed observation(s), sampled span 0.000s (sample-based bracket 0.000-0.500s); sequenced UDP application-delivery loss=0.10%; recovery=True (independent final ICMP and receiver-side UDP sequence evidence); advisory: transient failed observations or UDP delivery loss remained within the declared limits; interruption tolerance=PASS (ICMP failed observations <= 1%, UDP delivery loss <= 1%, sampled failed-observation span <= 1s; ready-through-post-migration)",
+      "observed": "migration-assessed",
+      "scenario": "Compute migration and placement lifecycle",
+      "source": null,
+      "started_at": "2026-10-09T08:01:18.027807+00:00",
+      "status": "PASS",
+      "test_id": "PLACEMENT-MIGRATION-OPPOSITE-provider-3a9-d58c4269-a52-60c8d6c1-b2d-bc3f4368236e"
+    },
+    {
+      "authoritative": true,
+      "category": "compute-placement",
+      "destination": null,
+      "details": {
+        "planned_check_id": "PAIR-TRANSITION-a1c13d7c62e9da96-opposite",
+        "transitions": [
+          {
+            "confirmed": true,
+            "destination_availability_zone": "zone-a",
+            "destination_host": "compute-c",
+            "server_id": "60c8d6c1-b2df-5513-a500-925ea2176f1c",
+            "source_availability_zone": "zone-a",
+            "source_host": "compute-d",
+            "continuity_assessment": {
+              "destination_ip": "198.51.100.226",
+              "family": 4,
+              "moving_server_id": "60c8d6c1-b2df-5513-a500-925ea2176f1c",
+              "observer_label": "Provider Provider One:A",
+              "observer_server_id": "d58c4269-a528-5b88-949d-f30c0e396966",
+              "source_ip": "198.51.100.187",
+              "stationary_server_id": "d58c4269-a528-5b88-949d-f30c0e396966",
+              "target_server_id": "60c8d6c1-b2df-5513-a500-925ea2176f1c"
+            }
+          }
+        ]
+      },
+      "display_name": "Move one endpoint and verify intra-compute placement",
+      "duration_ms": 0,
+      "expected": "requested-placement-verified",
+      "family": null,
+      "likely_failure": null,
+      "message": "Move one endpoint and verify intra-compute placement: placement verified; VM placement=PASS; migration completion=PASS; Long-lived TCP connected=True, survived=True; ICMP failed observations 1/577 (0.17%), 1 consecutive failed observation(s), sampled span 0.000s (sample-based bracket 0.000-0.500s); sequenced UDP application-delivery loss=0.10%; recovery=True (independent final ICMP and receiver-side UDP sequence evidence); advisory: transient failed observations or UDP delivery loss remained within the declared limits; interruption tolerance=PASS (ICMP failed observations <= 1%, UDP delivery loss <= 1%, sampled failed-observation span <= 1s; ready-through-post-migration)",
+      "observed": "requested-placement-verified",
+      "scenario": "Host-pair placement transition",
+      "source": null,
+      "started_at": "2026-10-09T08:02:04.191619+00:00",
+      "status": "PASS",
+      "test_id": "PAIR-TRANSITION-a1c13d7c62e9da96-opposite"
+    },
+    {
+      "authoritative": true,
+      "category": "network-performance",
+      "destination": "Provider Provider One:B (198.51.100.226)",
+      "details": {
+        "address_path": {
+          "destination": {
+            "association": {},
+            "fixed_ip": "198.51.100.226",
+            "fixed_ips": {
+              "cd802e34-fed2-5a3b-9205-47ea912fad5a": "2001:db8:11::1:0:231",
+              "2ad1d8f8-4e12-52db-9a01-218e93cdc418": "198.51.100.226"
+            },
+            "floating_ip": null,
+            "floating_ip_id": null,
+            "floating_ip_status": "none allocated",
+            "port_id": "accf55f2-014b-5d6a-b416-d458c5ed4bf7",
+            "probe_address": "198.51.100.226",
+            "server_id": "60c8d6c1-b2df-5513-a500-925ea2176f1c"
+          },
+          "observed_source_ip": null,
+          "source": {
+            "association": {},
+            "fixed_ip": "198.51.100.187",
+            "fixed_ips": {
+              "cd802e34-fed2-5a3b-9205-47ea912fad5a": "2001:db8:11::1:0:177",
+              "2ad1d8f8-4e12-52db-9a01-218e93cdc418": "198.51.100.187"
+            },
+            "floating_ip": null,
+            "floating_ip_id": null,
+            "floating_ip_status": "none allocated",
+            "port_id": "f9a4e474-4e95-5581-9e5c-c7e0cc8676ba",
+            "probe_address": "198.51.100.187",
+            "server_id": "d58c4269-a528-5b88-949d-f30c0e396966"
+          }
+        },
+        "measurement": "tcp-throughput",
+        "pair_placement": "opposite",
+        "pair_placement_policy": "initial-opposite-v1",
+        "path": {
+          "destination_availability_zone": "zone-a",
+          "destination_compute_host": "compute-c",
+          "destination_ip": "198.51.100.226",
+          "destination_label": "Provider Provider One:B",
+          "family": 4,
+          "path_kind": "endpoint",
+          "placement": "same-compute",
+          "source_availability_zone": "zone-a",
+          "source_category": "same-subnet",
+          "source_compute_host": "compute-c",
+          "source_ip": "198.51.100.187",
+          "source_label": "Provider Provider One:A",
+          "source_spec_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-OPPOSITE-SAME-4-provider-4443aa01-d6bf-51-6d5d40c9-f7412e8-d799b62c-A-B-TCP",
+          "stage": "group-local"
+        },
+        "planned_check_id": "CHECK-PERFORMANCE-3d044e7a1b12fe3a1db4994e"
+      },
+      "display_name": "TCP throughput",
+      "duration_ms": 33680,
+      "expected": "tcp-throughput-profile-recorded",
+      "family": 4,
+      "likely_failure": null,
+      "message": "forward single-stream median 1188.7 Mbps; reverse single-stream median 1190.6 Mbps; bidirectional aggregate 2358.9 Mbps; assessment=good",
+      "observed": "tcp-throughput-profile-measured",
+      "scenario": "Network path performance",
+      "source": "Provider Provider One:A (198.51.100.187)",
+      "started_at": "2026-10-09T08:02:28.686835Z",
+      "status": "PASS",
+      "test_id": "PERF-GROUP-LOCAL-SAME-SUBNET-IPV4-HQ-COMPUTE-C-TO-COMPUTE-D-965B424C-TCP-THROUGHPUT"
+    },
+    {
+      "authoritative": true,
+      "category": "egress",
+      "destination": "1.1.1.1",
+      "details": {
+        "address_path": {
+          "observed_source_ip": null,
+          "source": {
+            "association": {},
+            "fixed_ip": "198.51.100.187",
+            "fixed_ips": {
+              "cd802e34-fed2-5a3b-9205-47ea912fad5a": "2001:db8:11::1:0:177",
+              "2ad1d8f8-4e12-52db-9a01-218e93cdc418": "198.51.100.187"
+            },
+            "floating_ip": null,
+            "floating_ip_id": null,
+            "floating_ip_status": "none allocated",
+            "port_id": "f9a4e474-4e95-5581-9e5c-c7e0cc8676ba",
+            "probe_address": "198.51.100.187",
+            "server_id": "d58c4269-a528-5b88-949d-f30c0e396966"
+          }
+        },
+        "destination_side": "A",
+        "pair_placement": "opposite",
+        "pair_placement_policy": "initial-opposite-v1",
+        "placement_origin": "after-transition",
+        "planned_check_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-OPPOSITE-EGRESS-4-provider-4443aa01-d6bf-5113-aa71--b0a59837",
+        "protocol": "icmp",
+        "source_availability_zone": "zone-a",
+        "source_compute_host": "compute-c",
+        "source_server_id": "d58c4269-a528-5b88-949d-f30c0e396966",
+        "source_side": "A"
+      },
+      "display_name": "Sampled external IPv4 reachability to 1.1.1.1",
+      "duration_ms": 2532,
+      "expected": "reachable",
+      "family": 4,
+      "likely_failure": null,
+      "message": "automatic public targets are treated as required external reachability checks",
+      "observed": "reachable",
+      "scenario": "Sampled external egress",
+      "source": "Provider Provider One:A (198.51.100.187)",
+      "started_at": "2026-10-09T08:08:22.398045+00:00",
+      "status": "PASS",
+      "test_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-OPPOSITE-EGRESS-4-provider-4443aa01-d6bf-5113-aa71--b0a59837"
+    },
+    {
+      "authoritative": true,
+      "category": "floating-ip-peer",
+      "destination": "Private IPv4 translation through Provider One:B (198.51.100.244)",
+      "details": {
+        "address_path": {
+          "destination": {
+            "association": {
+              "attempts": 1,
+              "expected_fixed_ip": "10.32.0.119",
+              "expected_port_id": "89b06b54-73a7-568d-84e8-416abfe201da",
+              "fixed_ip_address": "10.32.0.119",
+              "floating_ip_address": "198.51.100.244",
+              "floating_ip_id": "e19a7829-ccac-5826-a761-2137d074a0a9",
+              "matched": true,
+              "observed_at": "2026-10-09T10:54:59.505142Z",
+              "port_id": "89b06b54-73a7-568d-84e8-416abfe201da",
+              "read_evidence": "floating ip list: exact unique ID after show formatter error"
+            },
+            "fixed_ip": "10.32.0.119",
+            "fixed_ips": {
+              "3b490fdb-6222-59e1-bb4c-d40450ffc0b5": "10.32.0.119"
+            },
+            "floating_ip": "198.51.100.244",
+            "floating_ip_id": "e19a7829-ccac-5826-a761-2137d074a0a9",
+            "floating_ip_status": "verified attached",
+            "port_id": "89b06b54-73a7-568d-84e8-416abfe201da",
+            "probe_address": "198.51.100.244",
+            "server_id": "8c506c0b-db7f-53a9-a33d-5f7ec79fd0c2"
+          },
+          "observed_source_ip": "198.51.100.226",
+          "source": {
+            "association": {
+              "attempts": 1,
+              "expected_fixed_ip": "10.32.0.156",
+              "expected_port_id": "27ba144f-35bb-5f3f-8f43-c21f9a5696c5",
+              "fixed_ip_address": "10.32.0.156",
+              "floating_ip_address": "198.51.100.226",
+              "floating_ip_id": "e9e9c17f-e90c-58bd-b247-9ce2982422e4",
+              "matched": true,
+              "observed_at": "2026-10-09T10:54:53.389144Z",
+              "port_id": "27ba144f-35bb-5f3f-8f43-c21f9a5696c5",
+              "read_evidence": "floating ip list: exact unique ID after show formatter error"
+            },
+            "fixed_ip": "10.32.0.156",
+            "fixed_ips": {
+              "3b490fdb-6222-59e1-bb4c-d40450ffc0b5": "10.32.0.156"
+            },
+            "floating_ip": "198.51.100.226",
+            "floating_ip_id": "e9e9c17f-e90c-58bd-b247-9ce2982422e4",
+            "floating_ip_status": "verified attached",
+            "port_id": "27ba144f-35bb-5f3f-8f43-c21f9a5696c5",
+            "probe_address": "10.32.0.156",
+            "server_id": "e282073d-3747-5f0c-9b75-642f40fb4222"
+          }
+        },
+        "destination_availability_zone": "zone-a",
+        "destination_compute_host": "compute-d",
+        "destination_server_id": "8c506c0b-db7f-53a9-a33d-5f7ec79fd0c2",
+        "destination_side": "B",
+        "nat_path": "same-router",
+        "pair_placement": "initial",
+        "pair_placement_policy": "initial-opposite-v1",
+        "placement_origin": "initial-boot",
+        "planned_check_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-FIP-PEER-TCP-private-translation-ipv4-external-2ad1d8f8-4e1-7f7558ea",
+        "protocol": "tcp",
+        "source_availability_zone": "zone-a",
+        "source_compute_host": "compute-c",
+        "source_server_id": "e282073d-3747-5f0c-9b75-642f40fb4222",
+        "source_side": "A"
+      },
+      "display_name": "VM with floating IP to peer floating IP — same-router, A to B, TCP / Provider One",
+      "duration_ms": 607,
+      "expected": "reachable",
+      "family": 4,
+      "likely_failure": null,
+      "message": "Flux owns and verifies both private endpoints and floating-IP mappings on the same external subnet",
+      "observed": "reachable",
+      "scenario": "Floating IPs behind the same router",
+      "source": "Private IPv4 translation through Provider One:A (10.32.0.156)",
+      "started_at": "2026-10-09T10:55:01.198725+00:00",
+      "status": "PASS",
+      "test_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-FIP-PEER-TCP-private-translation-ipv4-external-2ad1d8f8-4e1-7f7558ea"
+    },
+    {
+      "authoritative": true,
+      "category": "floating-ip-peer",
+      "destination": "Private IPv4 translation through Provider One:A (198.51.100.226)",
+      "details": {
+        "address_path": {
+          "destination": {
+            "association": {
+              "attempts": 1,
+              "expected_fixed_ip": "10.32.0.156",
+              "expected_port_id": "27ba144f-35bb-5f3f-8f43-c21f9a5696c5",
+              "fixed_ip_address": "10.32.0.156",
+              "floating_ip_address": "198.51.100.226",
+              "floating_ip_id": "e9e9c17f-e90c-58bd-b247-9ce2982422e4",
+              "matched": true,
+              "observed_at": "2026-10-09T10:56:20.867886Z",
+              "port_id": "27ba144f-35bb-5f3f-8f43-c21f9a5696c5",
+              "read_evidence": "floating ip list: exact unique ID after show formatter error"
+            },
+            "fixed_ip": "10.32.0.156",
+            "fixed_ips": {
+              "3b490fdb-6222-59e1-bb4c-d40450ffc0b5": "10.32.0.156"
+            },
+            "floating_ip": "198.51.100.226",
+            "floating_ip_id": "e9e9c17f-e90c-58bd-b247-9ce2982422e4",
+            "floating_ip_status": "verified attached",
+            "port_id": "27ba144f-35bb-5f3f-8f43-c21f9a5696c5",
+            "probe_address": "198.51.100.226",
+            "server_id": "e282073d-3747-5f0c-9b75-642f40fb4222"
+          },
+          "observed_source_ip": "198.51.100.226",
+          "source": {
+            "association": {
+              "attempts": 1,
+              "expected_fixed_ip": "10.32.0.156",
+              "expected_port_id": "27ba144f-35bb-5f3f-8f43-c21f9a5696c5",
+              "fixed_ip_address": "10.32.0.156",
+              "floating_ip_address": "198.51.100.226",
+              "floating_ip_id": "e9e9c17f-e90c-58bd-b247-9ce2982422e4",
+              "matched": true,
+              "observed_at": "2026-10-09T10:56:20.867886Z",
+              "port_id": "27ba144f-35bb-5f3f-8f43-c21f9a5696c5",
+              "read_evidence": "floating ip list: exact unique ID after show formatter error"
+            },
+            "fixed_ip": "10.32.0.156",
+            "fixed_ips": {
+              "3b490fdb-6222-59e1-bb4c-d40450ffc0b5": "10.32.0.156"
+            },
+            "floating_ip": "198.51.100.226",
+            "floating_ip_id": "e9e9c17f-e90c-58bd-b247-9ce2982422e4",
+            "floating_ip_status": "verified attached",
+            "port_id": "27ba144f-35bb-5f3f-8f43-c21f9a5696c5",
+            "probe_address": "10.32.0.156",
+            "server_id": "e282073d-3747-5f0c-9b75-642f40fb4222"
+          }
+        },
+        "destination_availability_zone": "zone-a",
+        "destination_compute_host": "compute-c",
+        "destination_server_id": "e282073d-3747-5f0c-9b75-642f40fb4222",
+        "destination_side": "A",
+        "nat_path": "self-hairpin",
+        "packet_path_placement": "self",
+        "pair_placement": "self",
+        "pair_placement_policy": "initial-opposite-v1",
+        "placement_origin": "initial-boot",
+        "planned_check_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-FIP-PEER-TCP-private-translation-ipv4-external-2ad1d8f8-4e1-c32177cd",
+        "protocol": "tcp",
+        "source_availability_zone": "zone-a",
+        "source_compute_host": "compute-c",
+        "source_server_id": "e282073d-3747-5f0c-9b75-642f40fb4222",
+        "source_side": "A",
+        "topology_placement_context": {
+          "compute_placement": "inter-compute",
+          "pair_placement": "initial"
+        }
+      },
+      "display_name": "Own floating-IP hairpin — self-hairpin, A to A, TCP / Provider One",
+      "duration_ms": 595,
+      "expected": "reachable",
+      "family": 4,
+      "likely_failure": null,
+      "message": "Flux owns and verifies both private endpoints and floating-IP mappings on the same external subnet",
+      "observed": "reachable",
+      "scenario": "VM reaching its own floating IP",
+      "source": "Private IPv4 translation through Provider One:A (10.32.0.156)",
+      "started_at": "2026-10-09T10:56:22.626090+00:00",
+      "status": "PASS",
+      "test_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-FIP-PEER-TCP-private-translation-ipv4-external-2ad1d8f8-4e1-c32177cd"
+    },
+    {
+      "authoritative": true,
+      "category": "floating-ip-peer",
+      "destination": "Private IPv4 translation through Provider One:B (198.51.100.244)",
+      "details": {
+        "address_path": {
+          "destination": {
+            "association": {
+              "attempts": 1,
+              "expected_fixed_ip": "10.32.0.119",
+              "expected_port_id": "89b06b54-73a7-568d-84e8-416abfe201da",
+              "fixed_ip_address": "10.32.0.119",
+              "floating_ip_address": "198.51.100.244",
+              "floating_ip_id": "e19a7829-ccac-5826-a761-2137d074a0a9",
+              "matched": true,
+              "observed_at": "2026-10-09T10:56:48.595040Z",
+              "port_id": "89b06b54-73a7-568d-84e8-416abfe201da",
+              "read_evidence": "floating ip list: exact unique ID after show formatter error"
+            },
+            "fixed_ip": "10.32.0.119",
+            "fixed_ips": {
+              "3b490fdb-6222-59e1-bb4c-d40450ffc0b5": "10.32.0.119"
+            },
+            "floating_ip": "198.51.100.244",
+            "floating_ip_id": "e19a7829-ccac-5826-a761-2137d074a0a9",
+            "floating_ip_status": "verified attached",
+            "port_id": "89b06b54-73a7-568d-84e8-416abfe201da",
+            "probe_address": "198.51.100.244",
+            "server_id": "8c506c0b-db7f-53a9-a33d-5f7ec79fd0c2"
+          },
+          "observed_source_ip": "198.51.100.244",
+          "source": {
+            "association": {
+              "attempts": 1,
+              "expected_fixed_ip": "10.32.0.119",
+              "expected_port_id": "89b06b54-73a7-568d-84e8-416abfe201da",
+              "fixed_ip_address": "10.32.0.119",
+              "floating_ip_address": "198.51.100.244",
+              "floating_ip_id": "e19a7829-ccac-5826-a761-2137d074a0a9",
+              "matched": true,
+              "observed_at": "2026-10-09T10:56:48.595040Z",
+              "port_id": "89b06b54-73a7-568d-84e8-416abfe201da",
+              "read_evidence": "floating ip list: exact unique ID after show formatter error"
+            },
+            "fixed_ip": "10.32.0.119",
+            "fixed_ips": {
+              "3b490fdb-6222-59e1-bb4c-d40450ffc0b5": "10.32.0.119"
+            },
+            "floating_ip": "198.51.100.244",
+            "floating_ip_id": "e19a7829-ccac-5826-a761-2137d074a0a9",
+            "floating_ip_status": "verified attached",
+            "port_id": "89b06b54-73a7-568d-84e8-416abfe201da",
+            "probe_address": "10.32.0.119",
+            "server_id": "8c506c0b-db7f-53a9-a33d-5f7ec79fd0c2"
+          }
+        },
+        "destination_availability_zone": "zone-a",
+        "destination_compute_host": "compute-d",
+        "destination_server_id": "8c506c0b-db7f-53a9-a33d-5f7ec79fd0c2",
+        "destination_side": "B",
+        "nat_path": "self-hairpin",
+        "packet_path_placement": "self",
+        "pair_placement": "self",
+        "pair_placement_policy": "initial-opposite-v1",
+        "placement_origin": "initial-boot",
+        "planned_check_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-FIP-PEER-TCP-private-translation-ipv4-external-2ad1d8f8-4e1-40c4e5e7",
+        "protocol": "tcp",
+        "source_availability_zone": "zone-a",
+        "source_compute_host": "compute-d",
+        "source_server_id": "8c506c0b-db7f-53a9-a33d-5f7ec79fd0c2",
+        "source_side": "B",
+        "topology_placement_context": {
+          "compute_placement": "inter-compute",
+          "pair_placement": "initial"
+        }
+      },
+      "display_name": "Own floating-IP hairpin — self-hairpin, B to B, TCP / Provider One",
+      "duration_ms": 603,
+      "expected": "reachable",
+      "family": 4,
+      "likely_failure": null,
+      "message": "Flux owns and verifies both private endpoints and floating-IP mappings on the same external subnet",
+      "observed": "reachable",
+      "scenario": "VM reaching its own floating IP",
+      "source": "Private IPv4 translation through Provider One:B (10.32.0.119)",
+      "started_at": "2026-10-09T10:56:50.366308+00:00",
+      "status": "PASS",
+      "test_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-FIP-PEER-TCP-private-translation-ipv4-external-2ad1d8f8-4e1-40c4e5e7"
+    },
+    {
+      "authoritative": true,
+      "category": "compute-placement",
+      "destination": null,
+      "details": {
+        "planned_check_id": "PAIR-TRANSITION-ab8b4fdcee515ae2-opposite",
+        "transitions": [
+          {
+            "confirmed": true,
+            "destination_availability_zone": "zone-a",
+            "destination_host": "compute-c",
+            "server_id": "8c506c0b-db7f-53a9-a33d-5f7ec79fd0c2",
+            "source_availability_zone": "zone-a",
+            "source_host": "compute-d",
+            "continuity_assessment": {
+              "destination_ip": "198.51.100.244",
+              "family": 4,
+              "moving_server_id": "8c506c0b-db7f-53a9-a33d-5f7ec79fd0c2",
+              "observer_label": "Private IPv4 translation through Provider One:A",
+              "observer_server_id": "e282073d-3747-5f0c-9b75-642f40fb4222",
+              "source_ip": "10.32.0.156",
+              "stationary_server_id": "e282073d-3747-5f0c-9b75-642f40fb4222",
+              "target_server_id": "8c506c0b-db7f-53a9-a33d-5f7ec79fd0c2"
+            }
+          }
+        ]
+      },
+      "display_name": "Move one endpoint and verify intra-compute placement",
+      "duration_ms": 0,
+      "expected": "requested-placement-verified",
+      "family": null,
+      "likely_failure": null,
+      "message": "Move one endpoint and verify intra-compute placement: placement verified; VM placement=PASS; migration completion=PASS; Long-lived TCP connected=True, survived=True; ICMP failed observations 8/510 (1.57%), 8 consecutive failed observation(s), sampled span 1.750s (sample-based bracket 1.750-2.250s); sequenced UDP application-delivery loss=0.12%; recovery=True (independent final ICMP and receiver-side UDP sequence evidence); interruption measurements: ICMP failed observations 1.57% exceeded 1.00%; sampled failed-observation span 1.750s exceeded 1.000s; observation: These tolerance levels reflect the goal of zero customer downtime. Exceeding them is an observation when migration completion, placement, TCP survival and traffic recovery are verified.; interruption tolerance=OBSERVATION (ICMP failed observations <= 1%, UDP delivery loss <= 1%, sampled failed-observation span <= 1s; ready-through-post-migration)",
+      "observed": "requested-placement-verified",
+      "scenario": "Host-pair placement transition",
+      "source": null,
+      "started_at": "2026-10-09T11:04:02.590566+00:00",
+      "status": "PASS",
+      "test_id": "PAIR-TRANSITION-ab8b4fdcee515ae2-opposite"
+    },
+    {
+      "authoritative": true,
+      "category": "floating-ip-peer",
+      "destination": "Private IPv4 translation through Provider One:A (198.51.100.226)",
+      "details": {
+        "address_path": {
+          "destination": {
+            "association": {
+              "attempts": 1,
+              "expected_fixed_ip": "10.32.0.156",
+              "expected_port_id": "27ba144f-35bb-5f3f-8f43-c21f9a5696c5",
+              "fixed_ip_address": "10.32.0.156",
+              "floating_ip_address": "198.51.100.226",
+              "floating_ip_id": "e9e9c17f-e90c-58bd-b247-9ce2982422e4",
+              "matched": true,
+              "observed_at": "2026-10-09T11:05:53.661374Z",
+              "port_id": "27ba144f-35bb-5f3f-8f43-c21f9a5696c5",
+              "read_evidence": "floating ip list: exact unique ID after show formatter error"
+            },
+            "fixed_ip": "10.32.0.156",
+            "fixed_ips": {
+              "3b490fdb-6222-59e1-bb4c-d40450ffc0b5": "10.32.0.156"
+            },
+            "floating_ip": "198.51.100.226",
+            "floating_ip_id": "e9e9c17f-e90c-58bd-b247-9ce2982422e4",
+            "floating_ip_status": "verified attached",
+            "port_id": "27ba144f-35bb-5f3f-8f43-c21f9a5696c5",
+            "probe_address": "198.51.100.226",
+            "server_id": "e282073d-3747-5f0c-9b75-642f40fb4222"
+          },
+          "observed_source_ip": "198.51.100.226",
+          "source": {
+            "association": {
+              "attempts": 1,
+              "expected_fixed_ip": "10.32.0.156",
+              "expected_port_id": "27ba144f-35bb-5f3f-8f43-c21f9a5696c5",
+              "fixed_ip_address": "10.32.0.156",
+              "floating_ip_address": "198.51.100.226",
+              "floating_ip_id": "e9e9c17f-e90c-58bd-b247-9ce2982422e4",
+              "matched": true,
+              "observed_at": "2026-10-09T11:05:53.661374Z",
+              "port_id": "27ba144f-35bb-5f3f-8f43-c21f9a5696c5",
+              "read_evidence": "floating ip list: exact unique ID after show formatter error"
+            },
+            "fixed_ip": "10.32.0.156",
+            "fixed_ips": {
+              "3b490fdb-6222-59e1-bb4c-d40450ffc0b5": "10.32.0.156"
+            },
+            "floating_ip": "198.51.100.226",
+            "floating_ip_id": "e9e9c17f-e90c-58bd-b247-9ce2982422e4",
+            "floating_ip_status": "verified attached",
+            "port_id": "27ba144f-35bb-5f3f-8f43-c21f9a5696c5",
+            "probe_address": "10.32.0.156",
+            "server_id": "e282073d-3747-5f0c-9b75-642f40fb4222"
+          }
+        },
+        "destination_availability_zone": "zone-a",
+        "destination_compute_host": "compute-c",
+        "destination_server_id": "e282073d-3747-5f0c-9b75-642f40fb4222",
+        "destination_side": "A",
+        "nat_path": "self-hairpin",
+        "packet_path_placement": "self",
+        "pair_placement": "self",
+        "pair_placement_policy": "initial-opposite-v1",
+        "placement_origin": "after-transition",
+        "planned_check_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-OPPOSITE-FIP-PEER-TCP-private-translation-ipv4-external-2ad1d8f8-4e1-c32177cd",
+        "protocol": "tcp",
+        "source_availability_zone": "zone-a",
+        "source_compute_host": "compute-c",
+        "source_server_id": "e282073d-3747-5f0c-9b75-642f40fb4222",
+        "source_side": "A",
+        "topology_placement_context": {
+          "compute_placement": "intra-compute",
+          "pair_placement": "opposite"
+        }
+      },
+      "display_name": "Own floating-IP hairpin — self-hairpin, A to A, TCP / Provider One",
+      "duration_ms": 592,
+      "expected": "reachable",
+      "family": 4,
+      "likely_failure": null,
+      "message": "Flux owns and verifies both private endpoints and floating-IP mappings on the same external subnet",
+      "observed": "reachable",
+      "scenario": "VM reaching its own floating IP",
+      "source": "Private IPv4 translation through Provider One:A (10.32.0.156)",
+      "started_at": "2026-10-09T11:05:55.394111+00:00",
+      "status": "PASS",
+      "test_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-OPPOSITE-FIP-PEER-TCP-private-translation-ipv4-external-2ad1d8f8-4e1-c32177cd"
+    },
+    {
+      "authoritative": true,
+      "category": "floating-ip-peer",
+      "destination": "Private IPv4 translation through Provider One:B (198.51.100.244)",
+      "details": {
+        "address_path": {
+          "destination": {
+            "association": {
+              "attempts": 1,
+              "expected_fixed_ip": "10.32.0.119",
+              "expected_port_id": "89b06b54-73a7-568d-84e8-416abfe201da",
+              "fixed_ip_address": "10.32.0.119",
+              "floating_ip_address": "198.51.100.244",
+              "floating_ip_id": "e19a7829-ccac-5826-a761-2137d074a0a9",
+              "matched": true,
+              "observed_at": "2026-10-09T11:06:21.341628Z",
+              "port_id": "89b06b54-73a7-568d-84e8-416abfe201da",
+              "read_evidence": "floating ip list: exact unique ID after show formatter error"
+            },
+            "fixed_ip": "10.32.0.119",
+            "fixed_ips": {
+              "3b490fdb-6222-59e1-bb4c-d40450ffc0b5": "10.32.0.119"
+            },
+            "floating_ip": "198.51.100.244",
+            "floating_ip_id": "e19a7829-ccac-5826-a761-2137d074a0a9",
+            "floating_ip_status": "verified attached",
+            "port_id": "89b06b54-73a7-568d-84e8-416abfe201da",
+            "probe_address": "198.51.100.244",
+            "server_id": "8c506c0b-db7f-53a9-a33d-5f7ec79fd0c2"
+          },
+          "observed_source_ip": "198.51.100.244",
+          "source": {
+            "association": {
+              "attempts": 1,
+              "expected_fixed_ip": "10.32.0.119",
+              "expected_port_id": "89b06b54-73a7-568d-84e8-416abfe201da",
+              "fixed_ip_address": "10.32.0.119",
+              "floating_ip_address": "198.51.100.244",
+              "floating_ip_id": "e19a7829-ccac-5826-a761-2137d074a0a9",
+              "matched": true,
+              "observed_at": "2026-10-09T11:06:21.341628Z",
+              "port_id": "89b06b54-73a7-568d-84e8-416abfe201da",
+              "read_evidence": "floating ip list: exact unique ID after show formatter error"
+            },
+            "fixed_ip": "10.32.0.119",
+            "fixed_ips": {
+              "3b490fdb-6222-59e1-bb4c-d40450ffc0b5": "10.32.0.119"
+            },
+            "floating_ip": "198.51.100.244",
+            "floating_ip_id": "e19a7829-ccac-5826-a761-2137d074a0a9",
+            "floating_ip_status": "verified attached",
+            "port_id": "89b06b54-73a7-568d-84e8-416abfe201da",
+            "probe_address": "10.32.0.119",
+            "server_id": "8c506c0b-db7f-53a9-a33d-5f7ec79fd0c2"
+          }
+        },
+        "destination_availability_zone": "zone-a",
+        "destination_compute_host": "compute-c",
+        "destination_server_id": "8c506c0b-db7f-53a9-a33d-5f7ec79fd0c2",
+        "destination_side": "B",
+        "nat_path": "self-hairpin",
+        "packet_path_placement": "self",
+        "pair_placement": "self",
+        "pair_placement_policy": "initial-opposite-v1",
+        "placement_origin": "after-transition",
+        "planned_check_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-OPPOSITE-FIP-PEER-TCP-private-translation-ipv4-external-2ad1d8f8-4e1-40c4e5e7",
+        "protocol": "tcp",
+        "source_availability_zone": "zone-a",
+        "source_compute_host": "compute-c",
+        "source_server_id": "8c506c0b-db7f-53a9-a33d-5f7ec79fd0c2",
+        "source_side": "B",
+        "topology_placement_context": {
+          "compute_placement": "intra-compute",
+          "pair_placement": "opposite"
+        }
+      },
+      "display_name": "Own floating-IP hairpin — self-hairpin, B to B, TCP / Provider One",
+      "duration_ms": 615,
+      "expected": "reachable",
+      "family": 4,
+      "likely_failure": null,
+      "message": "Flux owns and verifies both private endpoints and floating-IP mappings on the same external subnet",
+      "observed": "reachable",
+      "scenario": "VM reaching its own floating IP",
+      "source": "Private IPv4 translation through Provider One:B (10.32.0.119)",
+      "started_at": "2026-10-09T11:06:23.122891+00:00",
+      "status": "PASS",
+      "test_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-OPPOSITE-FIP-PEER-TCP-private-translation-ipv4-external-2ad1d8f8-4e1-40c4e5e7"
+    }
+  ],
+  "plan": {
+    "tests": [
+      {
+        "authoritative": true,
+        "category": "same-subnet",
+        "dependencies": [
+          "provider-4443aa01-d6bf-5113-aa71-7906cff68e60@workflow-3bc1150ee657f159"
+        ],
+        "destination_group_id": "provider-4443aa01-d6bf-5113-aa71-7906cff68e60@workflow-3bc1150ee657f159",
+        "destination_side": "B",
+        "destination_subnet_id": "2ad1d8f8-4e12-52db-9a01-218e93cdc418",
+        "display_name": "Provider subnet connectivity — IPv4 A to B TCP",
+        "expectation": "reachable",
+        "expectation_reason": "the source and destination use the same Neutron subnet",
+        "family": 4,
+        "id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-SAME-4-provider-4443aa01-d6bf-51-6d5d40c9-f7412e8-d799b62c-A-B-TCP",
+        "metadata": {
+          "host_qualification": true,
+          "host_qualification_cycle": 1,
+          "host_qualification_pair_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F",
+          "host_qualification_total_cycles": 1,
+          "pair_initial_host_hints": [
+            "compute-c",
+            "compute-d"
+          ],
+          "pair_observed_placement": "inter-compute",
+          "pair_placement": "initial",
+          "pair_placement_policy": "initial-opposite-v1",
+          "pair_scope_blockers": [],
+          "pair_scope_eligible": true,
+          "pair_scope_hosts": [
+            "compute-c",
+            "compute-d"
+          ],
+          "pair_scope_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL",
+          "pair_scope_zones": [
+            "zone-a",
+            "zone-a"
+          ],
+          "pair_selected_host_zones": {
+            "compute-c": "zone-a",
+            "compute-d": "zone-a"
+          },
+          "placement_origin": "initial-boot",
+          "requested_destination_host": "compute-d",
+          "requested_source_host": "compute-c",
+          "workflow_batch": "a1c13d7c62e9da96"
+        },
+        "operation": "probe",
+        "phase": "intra",
+        "protocol": "tcp",
+        "requires": [],
+        "requires_pass": [],
+        "scenario": "Provider subnet connectivity",
+        "source_group_id": "provider-4443aa01-d6bf-5113-aa71-7906cff68e60@workflow-3bc1150ee657f159",
+        "source_side": "A",
+        "source_subnet_id": "2ad1d8f8-4e12-52db-9a01-218e93cdc418"
+      },
+      {
+        "authoritative": true,
+        "category": "egress",
+        "dependencies": [
+          "provider-4443aa01-d6bf-5113-aa71-7906cff68e60@workflow-3bc1150ee657f159"
+        ],
+        "destination_group_id": null,
+        "destination_side": "A",
+        "destination_subnet_id": null,
+        "display_name": "Sampled external IPv4 reachability to 1.1.1.1",
+        "expectation": "reachable",
+        "expectation_reason": "automatic public targets are treated as required external reachability checks",
+        "family": 4,
+        "id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-EGRESS-4-provider-4443aa01-d6bf-5113-aa71--b0a59837",
+        "metadata": {
+          "host_qualification": true,
+          "host_qualification_cycle": 1,
+          "host_qualification_pair_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F",
+          "host_qualification_total_cycles": 1,
+          "pair_initial_host_hints": [
+            "compute-c",
+            "compute-d"
+          ],
+          "pair_observed_placement": "inter-compute",
+          "pair_placement": "initial",
+          "pair_placement_policy": "initial-opposite-v1",
+          "pair_scope_blockers": [],
+          "pair_scope_eligible": true,
+          "pair_scope_hosts": [
+            "compute-c",
+            "compute-d"
+          ],
+          "pair_scope_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL",
+          "pair_scope_zones": [
+            "zone-a",
+            "zone-a"
+          ],
+          "pair_selected_host_zones": {
+            "compute-c": "zone-a",
+            "compute-d": "zone-a"
+          },
+          "placement_origin": "initial-boot",
+          "requested_destination_host": "compute-d",
+          "requested_source_host": "compute-c",
+          "workflow_batch": "a1c13d7c62e9da96"
+        },
+        "operation": "egress",
+        "phase": "intra",
+        "protocol": "icmp",
+        "requires": [],
+        "requires_pass": [],
+        "scenario": "Sampled external egress",
+        "source_group_id": "provider-4443aa01-d6bf-5113-aa71-7906cff68e60@workflow-3bc1150ee657f159",
+        "source_side": "A",
+        "source_subnet_id": "2ad1d8f8-4e12-52db-9a01-218e93cdc418"
+      },
+      {
+        "authoritative": true,
+        "category": "compute-placement",
+        "dependencies": [
+          "provider-4443aa01-d6bf-5113-aa71-7906cff68e60@workflow-3bc1150ee657f159"
+        ],
+        "destination_group_id": null,
+        "destination_side": "A",
+        "destination_subnet_id": null,
+        "display_name": "Move one endpoint and verify intra-compute placement",
+        "expectation": "requested-placement-verified",
+        "expectation_reason": "The next placement must be verified before its checks run",
+        "family": null,
+        "id": "PAIR-TRANSITION-a1c13d7c62e9da96-opposite",
+        "metadata": {
+          "host_qualification": true,
+          "host_qualification_cycle": 1,
+          "host_qualification_pair_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F",
+          "host_qualification_total_cycles": 1,
+          "pair_desired_relation": "intra-compute",
+          "pair_initial_host_hints": [
+            "compute-c",
+            "compute-d"
+          ],
+          "pair_initial_observed_hosts": [
+            "compute-c",
+            "compute-d"
+          ],
+          "pair_observed_placement": null,
+          "pair_placement": "opposite",
+          "pair_placement_policy": "initial-opposite-v1",
+          "pair_scope_blockers": [],
+          "pair_scope_eligible": true,
+          "pair_scope_hosts": [
+            "compute-c",
+            "compute-c"
+          ],
+          "pair_scope_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-OPPOSITE",
+          "pair_scope_zones": [
+            "zone-a",
+            "zone-a"
+          ],
+          "pair_selected_host_zones": {
+            "compute-c": "zone-a",
+            "compute-d": "zone-a"
+          },
+          "placement_origin": "after-transition",
+          "requested_destination_host": "compute-d",
+          "requested_source_host": "compute-c",
+          "workflow_batch": "a1c13d7c62e9da96"
+        },
+        "operation": "pair-transition",
+        "phase": "placement",
+        "protocol": null,
+        "requires": [
+          "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-SAME-6-provider-4443aa01-d6bf-51-6d5d40c9-ba18a21-4d739d93-A-B-ICMP",
+          "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-SAME-6-provider-4443aa01-d6bf-51-6d5d40c9-ba18a21-4d739d93-A-B-TCP",
+          "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-SAME-6-provider-4443aa01-d6bf-51-6d5d40c9-ba18a21-4d739d93-A-B-UDP",
+          "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-SAME-6-provider-4443aa01-d6bf-51-6d5d40c9-ba18a21-4d739d93-B-A-ICMP",
+          "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-SAME-6-provider-4443aa01-d6bf-51-6d5d40c9-ba18a21-4d739d93-B-A-TCP",
+          "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-SAME-6-provider-4443aa01-d6bf-51-6d5d40c9-ba18a21-4d739d93-B-A-UDP",
+          "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-SAME-4-provider-4443aa01-d6bf-51-6d5d40c9-f7412e8-d799b62c-A-B-ICMP",
+          "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-SAME-4-provider-4443aa01-d6bf-51-6d5d40c9-f7412e8-d799b62c-A-B-TCP",
+          "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-SAME-4-provider-4443aa01-d6bf-51-6d5d40c9-f7412e8-d799b62c-A-B-UDP",
+          "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-SAME-4-provider-4443aa01-d6bf-51-6d5d40c9-f7412e8-d799b62c-B-A-ICMP",
+          "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-SAME-4-provider-4443aa01-d6bf-51-6d5d40c9-f7412e8-d799b62c-B-A-TCP",
+          "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-SAME-4-provider-4443aa01-d6bf-51-6d5d40c9-f7412e8-d799b62c-B-A-UDP"
+        ],
+        "requires_pass": [],
+        "scenario": "Host-pair placement transition",
+        "source_group_id": null,
+        "source_side": "A",
+        "source_subnet_id": null
+      },
+      {
+        "authoritative": true,
+        "category": "same-subnet",
+        "dependencies": [
+          "provider-4443aa01-d6bf-5113-aa71-7906cff68e60@workflow-3bc1150ee657f159"
+        ],
+        "destination_group_id": "provider-4443aa01-d6bf-5113-aa71-7906cff68e60@workflow-3bc1150ee657f159",
+        "destination_side": "B",
+        "destination_subnet_id": "2ad1d8f8-4e12-52db-9a01-218e93cdc418",
+        "display_name": "Provider subnet connectivity — IPv4 A to B TCP",
+        "expectation": "reachable",
+        "expectation_reason": "the source and destination use the same Neutron subnet",
+        "family": 4,
+        "id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-OPPOSITE-SAME-4-provider-4443aa01-d6bf-51-6d5d40c9-f7412e8-d799b62c-A-B-TCP",
+        "metadata": {
+          "host_qualification": true,
+          "host_qualification_cycle": 1,
+          "host_qualification_pair_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F",
+          "host_qualification_total_cycles": 1,
+          "pair_desired_relation": "intra-compute",
+          "pair_initial_host_hints": [
+            "compute-c",
+            "compute-d"
+          ],
+          "pair_initial_observed_hosts": [
+            "compute-c",
+            "compute-d"
+          ],
+          "pair_observed_placement": "intra-compute",
+          "pair_placement": "opposite",
+          "pair_placement_policy": "initial-opposite-v1",
+          "pair_scope_blockers": [],
+          "pair_scope_eligible": true,
+          "pair_scope_hosts": [
+            "compute-c",
+            "compute-c"
+          ],
+          "pair_scope_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-OPPOSITE",
+          "pair_scope_zones": [
+            "zone-a",
+            "zone-a"
+          ],
+          "pair_selected_host_zones": {
+            "compute-c": "zone-a",
+            "compute-d": "zone-a"
+          },
+          "placement_origin": "after-transition",
+          "requested_destination_host": "compute-d",
+          "requested_source_host": "compute-c",
+          "workflow_batch": "a1c13d7c62e9da96"
+        },
+        "operation": "probe",
+        "phase": "intra",
+        "protocol": "tcp",
+        "requires": [],
+        "requires_pass": [],
+        "scenario": "Provider subnet connectivity",
+        "source_group_id": "provider-4443aa01-d6bf-5113-aa71-7906cff68e60@workflow-3bc1150ee657f159",
+        "source_side": "A",
+        "source_subnet_id": "2ad1d8f8-4e12-52db-9a01-218e93cdc418"
+      },
+      {
+        "authoritative": true,
+        "category": "egress",
+        "dependencies": [
+          "provider-4443aa01-d6bf-5113-aa71-7906cff68e60@workflow-3bc1150ee657f159"
+        ],
+        "destination_group_id": null,
+        "destination_side": "A",
+        "destination_subnet_id": null,
+        "display_name": "Sampled external IPv4 reachability to 1.1.1.1",
+        "expectation": "reachable",
+        "expectation_reason": "automatic public targets are treated as required external reachability checks",
+        "family": 4,
+        "id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-OPPOSITE-EGRESS-4-provider-4443aa01-d6bf-5113-aa71--b0a59837",
+        "metadata": {
+          "host_qualification": true,
+          "host_qualification_cycle": 1,
+          "host_qualification_pair_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F",
+          "host_qualification_total_cycles": 1,
+          "pair_desired_relation": "intra-compute",
+          "pair_initial_host_hints": [
+            "compute-c",
+            "compute-d"
+          ],
+          "pair_initial_observed_hosts": [
+            "compute-c",
+            "compute-d"
+          ],
+          "pair_observed_placement": "intra-compute",
+          "pair_placement": "opposite",
+          "pair_placement_policy": "initial-opposite-v1",
+          "pair_scope_blockers": [],
+          "pair_scope_eligible": true,
+          "pair_scope_hosts": [
+            "compute-c",
+            "compute-c"
+          ],
+          "pair_scope_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-OPPOSITE",
+          "pair_scope_zones": [
+            "zone-a",
+            "zone-a"
+          ],
+          "pair_selected_host_zones": {
+            "compute-c": "zone-a",
+            "compute-d": "zone-a"
+          },
+          "placement_origin": "after-transition",
+          "requested_destination_host": "compute-d",
+          "requested_source_host": "compute-c",
+          "workflow_batch": "a1c13d7c62e9da96"
+        },
+        "operation": "egress",
+        "phase": "intra",
+        "protocol": "icmp",
+        "requires": [],
+        "requires_pass": [],
+        "scenario": "Sampled external egress",
+        "source_group_id": "provider-4443aa01-d6bf-5113-aa71-7906cff68e60@workflow-3bc1150ee657f159",
+        "source_side": "A",
+        "source_subnet_id": "2ad1d8f8-4e12-52db-9a01-218e93cdc418"
+      },
+      {
+        "authoritative": true,
+        "category": "floating-ip-peer",
+        "dependencies": [
+          "private-translation-ipv4-external-2ad1d8f8-4e12-52db-9a01-218e93cdc418@workflow-83501bb46407377d"
+        ],
+        "destination_group_id": "private-translation-ipv4-external-2ad1d8f8-4e12-52db-9a01-218e93cdc418@workflow-83501bb46407377d",
+        "destination_side": "B",
+        "destination_subnet_id": "runtime",
+        "display_name": "VM with floating IP to peer floating IP — same-router, A to B, TCP / Provider One",
+        "expectation": "reachable",
+        "expectation_reason": "Flux owns and verifies both private endpoints and floating-IP mappings on the same external subnet",
+        "family": 4,
+        "id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-FIP-PEER-TCP-private-translation-ipv4-external-2ad1d8f8-4e1-7f7558ea",
+        "metadata": {
+          "host_qualification": true,
+          "host_qualification_cycle": 1,
+          "host_qualification_pair_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F",
+          "host_qualification_total_cycles": 1,
+          "pair_initial_host_hints": [
+            "compute-c",
+            "compute-d"
+          ],
+          "pair_observed_placement": "inter-compute",
+          "pair_placement": "initial",
+          "pair_placement_policy": "initial-opposite-v1",
+          "pair_scope_blockers": [],
+          "pair_scope_eligible": true,
+          "pair_scope_hosts": [
+            "compute-c",
+            "compute-d"
+          ],
+          "pair_scope_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL",
+          "pair_scope_zones": [
+            "zone-a",
+            "zone-a"
+          ],
+          "pair_selected_host_zones": {
+            "compute-c": "zone-a",
+            "compute-d": "zone-a"
+          },
+          "placement_origin": "initial-boot",
+          "requested_destination_host": "compute-d",
+          "requested_source_host": "compute-c",
+          "workflow_batch": "ab8b4fdcee515ae2"
+        },
+        "operation": "fip-peer",
+        "phase": "cross",
+        "protocol": "tcp",
+        "requires": [],
+        "requires_pass": [],
+        "scenario": "Floating IPs behind the same router",
+        "source_group_id": "private-translation-ipv4-external-2ad1d8f8-4e12-52db-9a01-218e93cdc418@workflow-83501bb46407377d",
+        "source_side": "A",
+        "source_subnet_id": "runtime"
+      },
+      {
+        "authoritative": true,
+        "category": "floating-ip-peer",
+        "dependencies": [
+          "private-translation-ipv4-external-2ad1d8f8-4e12-52db-9a01-218e93cdc418@workflow-83501bb46407377d"
+        ],
+        "destination_group_id": "private-translation-ipv4-external-2ad1d8f8-4e12-52db-9a01-218e93cdc418@workflow-83501bb46407377d",
+        "destination_side": "A",
+        "destination_subnet_id": "runtime",
+        "display_name": "Own floating-IP hairpin — self-hairpin, A to A, TCP / Provider One",
+        "expectation": "reachable",
+        "expectation_reason": "Flux owns and verifies both private endpoints and floating-IP mappings on the same external subnet",
+        "family": 4,
+        "id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-FIP-PEER-TCP-private-translation-ipv4-external-2ad1d8f8-4e1-c32177cd",
+        "metadata": {
+          "host_qualification": true,
+          "host_qualification_cycle": 1,
+          "host_qualification_pair_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F",
+          "host_qualification_total_cycles": 1,
+          "pair_initial_host_hints": [
+            "compute-c",
+            "compute-d"
+          ],
+          "pair_observed_placement": "inter-compute",
+          "pair_placement": "initial",
+          "pair_placement_policy": "initial-opposite-v1",
+          "pair_scope_blockers": [],
+          "pair_scope_eligible": true,
+          "pair_scope_hosts": [
+            "compute-c",
+            "compute-d"
+          ],
+          "pair_scope_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL",
+          "pair_scope_zones": [
+            "zone-a",
+            "zone-a"
+          ],
+          "pair_selected_host_zones": {
+            "compute-c": "zone-a",
+            "compute-d": "zone-a"
+          },
+          "placement_origin": "initial-boot",
+          "requested_destination_host": "compute-d",
+          "requested_source_host": "compute-c",
+          "workflow_batch": "ab8b4fdcee515ae2"
+        },
+        "operation": "fip-peer",
+        "phase": "cross",
+        "protocol": "tcp",
+        "requires": [],
+        "requires_pass": [],
+        "scenario": "VM reaching its own floating IP",
+        "source_group_id": "private-translation-ipv4-external-2ad1d8f8-4e12-52db-9a01-218e93cdc418@workflow-83501bb46407377d",
+        "source_side": "A",
+        "source_subnet_id": "runtime"
+      },
+      {
+        "authoritative": true,
+        "category": "floating-ip-peer",
+        "dependencies": [
+          "private-translation-ipv4-external-2ad1d8f8-4e12-52db-9a01-218e93cdc418@workflow-83501bb46407377d"
+        ],
+        "destination_group_id": "private-translation-ipv4-external-2ad1d8f8-4e12-52db-9a01-218e93cdc418@workflow-83501bb46407377d",
+        "destination_side": "B",
+        "destination_subnet_id": "runtime",
+        "display_name": "Own floating-IP hairpin — self-hairpin, B to B, TCP / Provider One",
+        "expectation": "reachable",
+        "expectation_reason": "Flux owns and verifies both private endpoints and floating-IP mappings on the same external subnet",
+        "family": 4,
+        "id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-FIP-PEER-TCP-private-translation-ipv4-external-2ad1d8f8-4e1-40c4e5e7",
+        "metadata": {
+          "host_qualification": true,
+          "host_qualification_cycle": 1,
+          "host_qualification_pair_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F",
+          "host_qualification_total_cycles": 1,
+          "pair_initial_host_hints": [
+            "compute-c",
+            "compute-d"
+          ],
+          "pair_observed_placement": "inter-compute",
+          "pair_placement": "initial",
+          "pair_placement_policy": "initial-opposite-v1",
+          "pair_scope_blockers": [],
+          "pair_scope_eligible": true,
+          "pair_scope_hosts": [
+            "compute-c",
+            "compute-d"
+          ],
+          "pair_scope_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL",
+          "pair_scope_zones": [
+            "zone-a",
+            "zone-a"
+          ],
+          "pair_selected_host_zones": {
+            "compute-c": "zone-a",
+            "compute-d": "zone-a"
+          },
+          "placement_origin": "initial-boot",
+          "requested_destination_host": "compute-d",
+          "requested_source_host": "compute-c",
+          "workflow_batch": "ab8b4fdcee515ae2"
+        },
+        "operation": "fip-peer",
+        "phase": "cross",
+        "protocol": "tcp",
+        "requires": [],
+        "requires_pass": [],
+        "scenario": "VM reaching its own floating IP",
+        "source_group_id": "private-translation-ipv4-external-2ad1d8f8-4e12-52db-9a01-218e93cdc418@workflow-83501bb46407377d",
+        "source_side": "B",
+        "source_subnet_id": "runtime"
+      },
+      {
+        "authoritative": true,
+        "category": "compute-placement",
+        "dependencies": [
+          "private-translation-ipv4-external-2ad1d8f8-4e12-52db-9a01-218e93cdc418@workflow-83501bb46407377d"
+        ],
+        "destination_group_id": null,
+        "destination_side": "A",
+        "destination_subnet_id": null,
+        "display_name": "Move one endpoint and verify intra-compute placement",
+        "expectation": "requested-placement-verified",
+        "expectation_reason": "The next placement must be verified before its checks run",
+        "family": null,
+        "id": "PAIR-TRANSITION-ab8b4fdcee515ae2-opposite",
+        "metadata": {
+          "host_qualification": true,
+          "host_qualification_cycle": 1,
+          "host_qualification_pair_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F",
+          "host_qualification_total_cycles": 1,
+          "pair_desired_relation": "intra-compute",
+          "pair_initial_host_hints": [
+            "compute-c",
+            "compute-d"
+          ],
+          "pair_initial_observed_hosts": [
+            "compute-c",
+            "compute-d"
+          ],
+          "pair_observed_placement": null,
+          "pair_placement": "opposite",
+          "pair_placement_policy": "initial-opposite-v1",
+          "pair_scope_blockers": [],
+          "pair_scope_eligible": true,
+          "pair_scope_hosts": [
+            "compute-c",
+            "compute-c"
+          ],
+          "pair_scope_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-OPPOSITE",
+          "pair_scope_zones": [
+            "zone-a",
+            "zone-a"
+          ],
+          "pair_selected_host_zones": {
+            "compute-c": "zone-a",
+            "compute-d": "zone-a"
+          },
+          "placement_origin": "after-transition",
+          "requested_destination_host": "compute-d",
+          "requested_source_host": "compute-c",
+          "workflow_batch": "ab8b4fdcee515ae2"
+        },
+        "operation": "pair-transition",
+        "phase": "placement",
+        "protocol": null,
+        "requires": [
+          "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-FIP-PEER-ICMP-private-translation-ipv4-external-2ad1d8f8-4e1-7f7558ea",
+          "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-FIP-PEER-TCP-private-translation-ipv4-external-2ad1d8f8-4e1-7f7558ea",
+          "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-FIP-PEER-UDP-private-translation-ipv4-external-2ad1d8f8-4e1-7f7558ea",
+          "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-FIP-PEER-ICMP-private-translation-ipv4-external-2ad1d8f8-4e1-718dbc6c",
+          "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-FIP-PEER-TCP-private-translation-ipv4-external-2ad1d8f8-4e1-718dbc6c",
+          "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-FIP-PEER-UDP-private-translation-ipv4-external-2ad1d8f8-4e1-718dbc6c",
+          "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-FIP-PEER-ICMP-private-translation-ipv4-external-2ad1d8f8-4e1-c32177cd",
+          "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-FIP-PEER-TCP-private-translation-ipv4-external-2ad1d8f8-4e1-c32177cd",
+          "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-FIP-PEER-UDP-private-translation-ipv4-external-2ad1d8f8-4e1-c32177cd",
+          "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-FIP-PEER-ICMP-private-translation-ipv4-external-2ad1d8f8-4e1-40c4e5e7",
+          "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-FIP-PEER-TCP-private-translation-ipv4-external-2ad1d8f8-4e1-40c4e5e7",
+          "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-FIP-PEER-UDP-private-translation-ipv4-external-2ad1d8f8-4e1-40c4e5e7"
+        ],
+        "requires_pass": [],
+        "scenario": "Host-pair placement transition",
+        "source_group_id": null,
+        "source_side": "A",
+        "source_subnet_id": null
+      },
+      {
+        "authoritative": true,
+        "category": "floating-ip-peer",
+        "dependencies": [
+          "private-translation-ipv4-external-2ad1d8f8-4e12-52db-9a01-218e93cdc418@workflow-83501bb46407377d"
+        ],
+        "destination_group_id": "private-translation-ipv4-external-2ad1d8f8-4e12-52db-9a01-218e93cdc418@workflow-83501bb46407377d",
+        "destination_side": "A",
+        "destination_subnet_id": "runtime",
+        "display_name": "Own floating-IP hairpin — self-hairpin, A to A, TCP / Provider One",
+        "expectation": "reachable",
+        "expectation_reason": "Flux owns and verifies both private endpoints and floating-IP mappings on the same external subnet",
+        "family": 4,
+        "id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-OPPOSITE-FIP-PEER-TCP-private-translation-ipv4-external-2ad1d8f8-4e1-c32177cd",
+        "metadata": {
+          "host_qualification": true,
+          "host_qualification_cycle": 1,
+          "host_qualification_pair_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F",
+          "host_qualification_total_cycles": 1,
+          "pair_desired_relation": "intra-compute",
+          "pair_initial_host_hints": [
+            "compute-c",
+            "compute-d"
+          ],
+          "pair_initial_observed_hosts": [
+            "compute-c",
+            "compute-d"
+          ],
+          "pair_observed_placement": "intra-compute",
+          "pair_placement": "opposite",
+          "pair_placement_policy": "initial-opposite-v1",
+          "pair_scope_blockers": [],
+          "pair_scope_eligible": true,
+          "pair_scope_hosts": [
+            "compute-c",
+            "compute-c"
+          ],
+          "pair_scope_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-OPPOSITE",
+          "pair_scope_zones": [
+            "zone-a",
+            "zone-a"
+          ],
+          "pair_selected_host_zones": {
+            "compute-c": "zone-a",
+            "compute-d": "zone-a"
+          },
+          "placement_origin": "after-transition",
+          "requested_destination_host": "compute-d",
+          "requested_source_host": "compute-c",
+          "workflow_batch": "ab8b4fdcee515ae2"
+        },
+        "operation": "fip-peer",
+        "phase": "cross",
+        "protocol": "tcp",
+        "requires": [],
+        "requires_pass": [],
+        "scenario": "VM reaching its own floating IP",
+        "source_group_id": "private-translation-ipv4-external-2ad1d8f8-4e12-52db-9a01-218e93cdc418@workflow-83501bb46407377d",
+        "source_side": "A",
+        "source_subnet_id": "runtime"
+      },
+      {
+        "authoritative": true,
+        "category": "floating-ip-peer",
+        "dependencies": [
+          "private-translation-ipv4-external-2ad1d8f8-4e12-52db-9a01-218e93cdc418@workflow-83501bb46407377d"
+        ],
+        "destination_group_id": "private-translation-ipv4-external-2ad1d8f8-4e12-52db-9a01-218e93cdc418@workflow-83501bb46407377d",
+        "destination_side": "B",
+        "destination_subnet_id": "runtime",
+        "display_name": "Own floating-IP hairpin — self-hairpin, B to B, TCP / Provider One",
+        "expectation": "reachable",
+        "expectation_reason": "Flux owns and verifies both private endpoints and floating-IP mappings on the same external subnet",
+        "family": 4,
+        "id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-OPPOSITE-FIP-PEER-TCP-private-translation-ipv4-external-2ad1d8f8-4e1-40c4e5e7",
+        "metadata": {
+          "host_qualification": true,
+          "host_qualification_cycle": 1,
+          "host_qualification_pair_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F",
+          "host_qualification_total_cycles": 1,
+          "pair_desired_relation": "intra-compute",
+          "pair_initial_host_hints": [
+            "compute-c",
+            "compute-d"
+          ],
+          "pair_initial_observed_hosts": [
+            "compute-c",
+            "compute-d"
+          ],
+          "pair_observed_placement": "intra-compute",
+          "pair_placement": "opposite",
+          "pair_placement_policy": "initial-opposite-v1",
+          "pair_scope_blockers": [],
+          "pair_scope_eligible": true,
+          "pair_scope_hosts": [
+            "compute-c",
+            "compute-c"
+          ],
+          "pair_scope_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-OPPOSITE",
+          "pair_scope_zones": [
+            "zone-a",
+            "zone-a"
+          ],
+          "pair_selected_host_zones": {
+            "compute-c": "zone-a",
+            "compute-d": "zone-a"
+          },
+          "placement_origin": "after-transition",
+          "requested_destination_host": "compute-d",
+          "requested_source_host": "compute-c",
+          "workflow_batch": "ab8b4fdcee515ae2"
+        },
+        "operation": "fip-peer",
+        "phase": "cross",
+        "protocol": "tcp",
+        "requires": [],
+        "requires_pass": [],
+        "scenario": "VM reaching its own floating IP",
+        "source_group_id": "private-translation-ipv4-external-2ad1d8f8-4e12-52db-9a01-218e93cdc418@workflow-83501bb46407377d",
+        "source_side": "B",
+        "source_subnet_id": "runtime"
+      },
+      {
+        "authoritative": true,
+        "category": "network-performance",
+        "dependencies": [
+          "provider-4443aa01-d6bf-5113-aa71-7906cff68e60@workflow-3bc1150ee657f159"
+        ],
+        "destination_group_id": "provider-4443aa01-d6bf-5113-aa71-7906cff68e60@workflow-3bc1150ee657f159",
+        "destination_side": "B",
+        "destination_subnet_id": "2ad1d8f8-4e12-52db-9a01-218e93cdc418",
+        "display_name": "TCP throughput",
+        "expectation": "tcp-throughput-profile-recorded",
+        "expectation_reason": "every measured direction passed authoritative functional reachability and is eligible for network-path performance measurement",
+        "family": 4,
+        "id": "PERF-GROUP-LOCAL-SAME-SUBNET-IPV4-HQ-COMPUTE-C-TO-COMPUTE-D-60DDD316-TCP-THROUGHPUT",
+        "metadata": {
+          "host_qualification": true,
+          "host_qualification_cycle": 1,
+          "host_qualification_pair_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F",
+          "host_qualification_total_cycles": 1,
+          "pair_initial_host_hints": [
+            "compute-c",
+            "compute-d"
+          ],
+          "pair_observed_placement": "inter-compute",
+          "pair_placement": "initial",
+          "pair_placement_policy": "initial-opposite-v1",
+          "pair_scope_blockers": [],
+          "pair_scope_eligible": true,
+          "pair_scope_hosts": [
+            "compute-c",
+            "compute-d"
+          ],
+          "pair_scope_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL",
+          "pair_scope_zones": [
+            "zone-a",
+            "zone-a"
+          ],
+          "pair_selected_host_zones": {
+            "compute-c": "zone-a",
+            "compute-d": "zone-a"
+          },
+          "placement_origin": "initial-boot",
+          "requested_destination_host": "compute-d",
+          "requested_source_host": "compute-c",
+          "workflow_batch": "a1c13d7c62e9da96"
+        },
+        "operation": "performance-tcp-throughput",
+        "phase": "group-local",
+        "protocol": "performance",
+        "requires": [],
+        "requires_pass": [],
+        "scenario": "Network path performance",
+        "source_group_id": "provider-4443aa01-d6bf-5113-aa71-7906cff68e60@workflow-3bc1150ee657f159",
+        "source_side": "A",
+        "source_subnet_id": "2ad1d8f8-4e12-52db-9a01-218e93cdc418"
+      },
+      {
+        "authoritative": true,
+        "category": "compute-placement",
+        "dependencies": [
+          "provider-4443aa01-d6bf-5113-aa71-7906cff68e60@workflow-3bc1150ee657f159"
+        ],
+        "destination_group_id": null,
+        "destination_side": "A",
+        "destination_subnet_id": null,
+        "display_name": "Create opposite placement using the configured migration strategy — Provider Provider One:A / Provider Provider One:B",
+        "expectation": "placement-achieved",
+        "expectation_reason": "compute placement and migration state must match the requested topology",
+        "family": null,
+        "id": "PLACEMENT-MIGRATION-OPPOSITE-provider-3a9-d58c4269-a52-60c8d6c1-b2d-bc3f4368236e",
+        "metadata": {
+          "host_qualification": true,
+          "host_qualification_cycle": 1,
+          "host_qualification_pair_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F",
+          "host_qualification_total_cycles": 1,
+          "pair_desired_relation": "intra-compute",
+          "pair_initial_host_hints": [
+            "compute-c",
+            "compute-d"
+          ],
+          "pair_initial_observed_hosts": [
+            "compute-c",
+            "compute-d"
+          ],
+          "pair_observed_placement": null,
+          "pair_placement": "opposite",
+          "pair_placement_policy": "initial-opposite-v1",
+          "pair_scope_blockers": [],
+          "pair_scope_eligible": true,
+          "pair_scope_hosts": [
+            "compute-c",
+            "compute-c"
+          ],
+          "pair_scope_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-OPPOSITE",
+          "pair_scope_zones": [
+            "zone-a",
+            "zone-a"
+          ],
+          "pair_selected_host_zones": {
+            "compute-c": "zone-a",
+            "compute-d": "zone-a"
+          },
+          "placement_origin": "after-transition",
+          "requested_destination_host": "compute-d",
+          "requested_source_host": "compute-c",
+          "workflow_batch": "a1c13d7c62e9da96"
+        },
+        "operation": "compute-placement",
+        "phase": "placement",
+        "protocol": null,
+        "requires": [],
+        "requires_pass": [],
+        "scenario": "Compute migration and placement lifecycle",
+        "source_group_id": null,
+        "source_side": "A",
+        "source_subnet_id": null
+      },
+      {
+        "authoritative": true,
+        "category": "compute-placement",
+        "dependencies": [
+          "provider-4443aa01-d6bf-5113-aa71-7906cff68e60@workflow-3bc1150ee657f159"
+        ],
+        "destination_group_id": null,
+        "destination_side": "A",
+        "destination_subnet_id": null,
+        "display_name": "Live-migrate an endpoint into opposite placement — Provider Provider One:A / Provider Provider One:B",
+        "expectation": "live-migration-complete",
+        "expectation_reason": "compute placement and migration state must match the requested topology",
+        "family": null,
+        "id": "PLACEMENT-LIVE-MIGRATION-OPPOSITE-provider-3a9-d58c4269-a52-60c8d6c1-b2d-bc3f4368236e",
+        "metadata": {
+          "host_qualification": true,
+          "host_qualification_cycle": 1,
+          "host_qualification_pair_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F",
+          "host_qualification_total_cycles": 1,
+          "pair_desired_relation": "intra-compute",
+          "pair_initial_host_hints": [
+            "compute-c",
+            "compute-d"
+          ],
+          "pair_initial_observed_hosts": [
+            "compute-c",
+            "compute-d"
+          ],
+          "pair_observed_placement": null,
+          "pair_placement": "opposite",
+          "pair_placement_policy": "initial-opposite-v1",
+          "pair_scope_blockers": [],
+          "pair_scope_eligible": true,
+          "pair_scope_hosts": [
+            "compute-c",
+            "compute-c"
+          ],
+          "pair_scope_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-OPPOSITE",
+          "pair_scope_zones": [
+            "zone-a",
+            "zone-a"
+          ],
+          "pair_selected_host_zones": {
+            "compute-c": "zone-a",
+            "compute-d": "zone-a"
+          },
+          "placement_origin": "after-transition",
+          "requested_destination_host": "compute-d",
+          "requested_source_host": "compute-c",
+          "workflow_batch": "a1c13d7c62e9da96"
+        },
+        "operation": "compute-placement",
+        "phase": "placement",
+        "protocol": null,
+        "requires": [],
+        "requires_pass": [],
+        "scenario": "Live migration capability",
+        "source_group_id": null,
+        "source_side": "A",
+        "source_subnet_id": null
+      },
+      {
+        "authoritative": true,
+        "category": "compute-placement",
+        "dependencies": [
+          "provider-4443aa01-d6bf-5113-aa71-7906cff68e60@workflow-3bc1150ee657f159"
+        ],
+        "destination_group_id": null,
+        "destination_side": "A",
+        "destination_subnet_id": null,
+        "display_name": "Verify fresh functional baseline before live migration submission 1",
+        "expectation": "fresh-functional-matrix",
+        "expectation_reason": "compute placement and migration state must match the requested topology",
+        "family": null,
+        "id": "PLACEMENT-MIGRATION-FUNCTIONAL-BASELINE-1-provider-3a9-d58c4269-a52-60c8d6c1-b2d-bc3f4368236e",
+        "metadata": {
+          "host_qualification": true,
+          "host_qualification_cycle": 1,
+          "host_qualification_pair_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F",
+          "host_qualification_total_cycles": 1,
+          "pair_desired_relation": "intra-compute",
+          "pair_initial_host_hints": [
+            "compute-c",
+            "compute-d"
+          ],
+          "pair_initial_observed_hosts": [
+            "compute-c",
+            "compute-d"
+          ],
+          "pair_observed_placement": null,
+          "pair_placement": "opposite",
+          "pair_placement_policy": "initial-opposite-v1",
+          "pair_scope_blockers": [],
+          "pair_scope_eligible": true,
+          "pair_scope_hosts": [
+            "compute-c",
+            "compute-c"
+          ],
+          "pair_scope_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-OPPOSITE",
+          "pair_scope_zones": [
+            "zone-a",
+            "zone-a"
+          ],
+          "pair_selected_host_zones": {
+            "compute-c": "zone-a",
+            "compute-d": "zone-a"
+          },
+          "placement_origin": "after-transition",
+          "requested_destination_host": "compute-d",
+          "requested_source_host": "compute-c",
+          "workflow_batch": "a1c13d7c62e9da96"
+        },
+        "operation": "compute-placement",
+        "phase": "placement",
+        "protocol": null,
+        "requires": [],
+        "requires_pass": [],
+        "scenario": "Compute migration safety barrier",
+        "source_group_id": null,
+        "source_side": "A",
+        "source_subnet_id": null
+      },
+      {
+        "authoritative": true,
+        "category": "same-subnet",
+        "dependencies": [
+          "provider-4443aa01-d6bf-5113-aa71-7906cff68e60@workflow-3bc1150ee657f159"
+        ],
+        "destination_group_id": "provider-4443aa01-d6bf-5113-aa71-7906cff68e60@workflow-3bc1150ee657f159",
+        "destination_side": "B",
+        "destination_subnet_id": "cd802e34-fed2-5a3b-9205-47ea912fad5a",
+        "display_name": "Provider subnet connectivity — IPv6 A to B TCP — pre-migration safety round 1/1",
+        "expectation": "reachable",
+        "expectation_reason": "the source and destination use the same Neutron subnet",
+        "family": 6,
+        "id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-SAME-6-provider-4443aa01-d6bf-51-6d5d40c9-ba18a21-4d739d93-A-B-TCP-PRE-MIGRATION-1-ROUND-1-provider-3a9-d58c4269-a52-60c8d6c1-b2d-409956c0eef5",
+        "metadata": {
+          "host_qualification": true,
+          "host_qualification_cycle": 1,
+          "host_qualification_pair_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F",
+          "host_qualification_total_cycles": 1,
+          "pair_desired_relation": "intra-compute",
+          "pair_initial_host_hints": [
+            "compute-c",
+            "compute-d"
+          ],
+          "pair_initial_observed_hosts": [
+            "compute-c",
+            "compute-d"
+          ],
+          "pair_observed_placement": "inter-compute",
+          "pair_placement": "initial",
+          "pair_placement_policy": "initial-opposite-v1",
+          "pair_scope_blockers": [],
+          "pair_scope_eligible": true,
+          "pair_scope_hosts": [
+            "compute-c",
+            "compute-d"
+          ],
+          "pair_scope_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL",
+          "pair_scope_zones": [
+            "zone-a",
+            "zone-a"
+          ],
+          "pair_selected_host_zones": {
+            "compute-c": "zone-a",
+            "compute-d": "zone-a"
+          },
+          "placement_origin": "initial-boot",
+          "requested_destination_host": "compute-d",
+          "requested_source_host": "compute-c",
+          "workflow_batch": "a1c13d7c62e9da96"
+        },
+        "operation": "probe",
+        "phase": "placement",
+        "protocol": "tcp",
+        "requires": [],
+        "requires_pass": [],
+        "scenario": "Compute migration safety barrier",
+        "source_group_id": "provider-4443aa01-d6bf-5113-aa71-7906cff68e60@workflow-3bc1150ee657f159",
+        "source_side": "A",
+        "source_subnet_id": "cd802e34-fed2-5a3b-9205-47ea912fad5a"
+      },
+      {
+        "authoritative": true,
+        "category": "same-subnet",
+        "dependencies": [
+          "provider-4443aa01-d6bf-5113-aa71-7906cff68e60@workflow-3bc1150ee657f159"
+        ],
+        "destination_group_id": "provider-4443aa01-d6bf-5113-aa71-7906cff68e60@workflow-3bc1150ee657f159",
+        "destination_side": "B",
+        "destination_subnet_id": "2ad1d8f8-4e12-52db-9a01-218e93cdc418",
+        "display_name": "Provider subnet connectivity — IPv4 A to B TCP — pre-migration safety round 1/1",
+        "expectation": "reachable",
+        "expectation_reason": "the source and destination use the same Neutron subnet",
+        "family": 4,
+        "id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL-SAME-4-provider-4443aa01-d6bf-51-6d5d40c9-f7412e8-d799b62c-A-B-TCP-PRE-MIGRATION-1-ROUND-1-provider-3a9-d58c4269-a52-60c8d6c1-b2d-409956c0eef5",
+        "metadata": {
+          "host_qualification": true,
+          "host_qualification_cycle": 1,
+          "host_qualification_pair_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F",
+          "host_qualification_total_cycles": 1,
+          "pair_desired_relation": "intra-compute",
+          "pair_initial_host_hints": [
+            "compute-c",
+            "compute-d"
+          ],
+          "pair_initial_observed_hosts": [
+            "compute-c",
+            "compute-d"
+          ],
+          "pair_observed_placement": "inter-compute",
+          "pair_placement": "initial",
+          "pair_placement_policy": "initial-opposite-v1",
+          "pair_scope_blockers": [],
+          "pair_scope_eligible": true,
+          "pair_scope_hosts": [
+            "compute-c",
+            "compute-d"
+          ],
+          "pair_scope_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-INITIAL",
+          "pair_scope_zones": [
+            "zone-a",
+            "zone-a"
+          ],
+          "pair_selected_host_zones": {
+            "compute-c": "zone-a",
+            "compute-d": "zone-a"
+          },
+          "placement_origin": "initial-boot",
+          "requested_destination_host": "compute-d",
+          "requested_source_host": "compute-c",
+          "workflow_batch": "a1c13d7c62e9da96"
+        },
+        "operation": "probe",
+        "phase": "placement",
+        "protocol": "tcp",
+        "requires": [],
+        "requires_pass": [],
+        "scenario": "Compute migration safety barrier",
+        "source_group_id": "provider-4443aa01-d6bf-5113-aa71-7906cff68e60@workflow-3bc1150ee657f159",
+        "source_side": "A",
+        "source_subnet_id": "2ad1d8f8-4e12-52db-9a01-218e93cdc418"
+      },
+      {
+        "authoritative": true,
+        "category": "network-performance",
+        "dependencies": [
+          "provider-4443aa01-d6bf-5113-aa71-7906cff68e60@workflow-3bc1150ee657f159"
+        ],
+        "destination_group_id": "provider-4443aa01-d6bf-5113-aa71-7906cff68e60@workflow-3bc1150ee657f159",
+        "destination_side": "B",
+        "destination_subnet_id": "2ad1d8f8-4e12-52db-9a01-218e93cdc418",
+        "display_name": "TCP throughput",
+        "expectation": "tcp-throughput-profile-recorded",
+        "expectation_reason": "every measured direction passed authoritative functional reachability and is eligible for network-path performance measurement",
+        "family": 4,
+        "id": "PERF-GROUP-LOCAL-SAME-SUBNET-IPV4-HQ-COMPUTE-C-TO-COMPUTE-D-965B424C-TCP-THROUGHPUT",
+        "metadata": {
+          "host_qualification": true,
+          "host_qualification_cycle": 1,
+          "host_qualification_pair_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F",
+          "host_qualification_total_cycles": 1,
+          "pair_desired_relation": "intra-compute",
+          "pair_initial_host_hints": [
+            "compute-c",
+            "compute-d"
+          ],
+          "pair_initial_observed_hosts": [
+            "compute-c",
+            "compute-d"
+          ],
+          "pair_observed_placement": "intra-compute",
+          "pair_placement": "opposite",
+          "pair_placement_policy": "initial-opposite-v1",
+          "pair_scope_blockers": [],
+          "pair_scope_eligible": true,
+          "pair_scope_hosts": [
+            "compute-c",
+            "compute-c"
+          ],
+          "pair_scope_id": "HQ-COMPUTE-C-TO-COMPUTE-D-2A43D2DE9F-C1-OPPOSITE",
+          "pair_scope_zones": [
+            "zone-a",
+            "zone-a"
+          ],
+          "pair_selected_host_zones": {
+            "compute-c": "zone-a",
+            "compute-d": "zone-a"
+          },
+          "placement_origin": "after-transition",
+          "requested_destination_host": "compute-d",
+          "requested_source_host": "compute-c",
+          "workflow_batch": "a1c13d7c62e9da96"
+        },
+        "operation": "performance-tcp-throughput",
+        "phase": "group-local",
+        "protocol": "performance",
+        "requires": [],
+        "requires_pass": [],
+        "scenario": "Network path performance",
+        "source_group_id": "provider-4443aa01-d6bf-5113-aa71-7906cff68e60@workflow-3bc1150ee657f159",
+        "source_side": "A",
+        "source_subnet_id": "2ad1d8f8-4e12-52db-9a01-218e93cdc418"
+      }
+    ],
+    "host_qualification": {
+      "enabled": true
+    }
+  },
+  "resources": []
+}

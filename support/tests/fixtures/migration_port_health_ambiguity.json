@@ -1,0 +1,242 @@
+{
+  "accepted": true,
+  "attempt": 1,
+  "availability_zone": "az-a",
+  "command": [
+    "--os-compute-api-version",
+    "2.56",
+    "server",
+    "migrate",
+    "--live-migration",
+    "--host",
+    "compute-b",
+    "--shared-migration",
+    "--wait",
+    "00000000-0000-4000-8000-000000000001"
+  ],
+  "command_fingerprint": "85ae2b9d74968c29e781e80012c1b321f2ade0802915d3368f8d688ecc2c1027",
+  "conflicts": [
+    "all-cloud-operations"
+  ],
+  "destination_host": "compute-b",
+  "duration_seconds": null,
+  "evidence": {
+    "completion_assessment": {
+      "checks": {
+        "endpoint_ready": true,
+        "guest_marker_verified": true,
+        "migration_record_verified": true,
+        "placement_verified": true,
+        "port_binding_verified": false,
+        "task_state_cleared": true,
+        "volume_attachment_verified": true
+      },
+      "failed_checks": [
+        "port_binding_verified"
+      ],
+      "missing_checks": [],
+      "resubmission_permitted": false,
+      "status": "FAIL",
+      "verified": false
+    },
+    "destination_availability_zone": "az-a",
+    "destination_host": "compute-b",
+    "endpoint_ready": true,
+    "guest_marker_verified": true,
+    "migration_record_error": null,
+    "migration_record_verified": true,
+    "port_binding_verified": false,
+    "server_id": "00000000-0000-4000-8000-000000000001",
+    "source_availability_zone": "az-a",
+    "source_host": "compute-a",
+    "task_state_cleared": true,
+    "volume_attachment_verified": true
+  },
+  "kind": "migration",
+  "max_attempts": 6,
+  "message": "Migration handoff was observed but completion is not verified; no resubmission is permitted: port_binding_verified",
+  "operation_id": "migration-c1b62c386dc9479287ec4a0d5ffae199-command-01",
+  "outcome": "AMBIGUOUS",
+  "pre_state": {
+    "destination_selection": {
+      "aggregate_ids": [
+        "1"
+      ],
+      "aggregate_names": [
+        "storage-a"
+      ],
+      "availability_zone": "az-a",
+      "destination_host": "compute-b",
+      "migration_type": "live",
+      "server_id": "00000000-0000-4000-8000-000000000001",
+      "source_host": "compute-a",
+      "storage_compatible": true,
+      "storage_mode": "shared",
+      "transport": "shared-or-volume-live"
+    },
+    "effective_submission_budget": 5,
+    "migration_ids": [],
+    "migration_port_ids": [
+      "00000000-0000-4000-8000-000000000002",
+      "00000000-0000-4000-8000-000000000003"
+    ],
+    "migration_resource_ids": [
+      "00000000-0000-4000-8000-000000000001",
+      "00000000-0000-4000-8000-000000000003",
+      "00000000-0000-4000-8000-000000000002",
+      "00000000-0000-4000-8000-000000000004"
+    ],
+    "migration_volume_ids": [
+      "00000000-0000-4000-8000-000000000004"
+    ],
+    "moving_endpoint": "IPv6 project networks on one router [az-a]:B",
+    "observation_count": 3,
+    "source_host": "compute-a",
+    "stable_observations": [
+      {
+        "migration_ids": [],
+        "ports": {
+          "00000000-0000-4000-8000-000000000002": {
+            "binding_host": "compute-a",
+            "device_id": "00000000-0000-4000-8000-000000000001",
+            "fixed_ips": [
+              [
+                "00000000-0000-4000-8000-000000000005",
+                "fd00::104"
+              ]
+            ],
+            "mac_address": "fa:16:3e:37:99:ae",
+            "security_groups": [
+              "00000000-0000-4000-8000-000000000007"
+            ],
+            "status": "ACTIVE"
+          },
+          "00000000-0000-4000-8000-000000000003": {
+            "binding_host": "compute-a",
+            "device_id": "00000000-0000-4000-8000-000000000001",
+            "fixed_ips": [
+              [
+                "00000000-0000-4000-8000-000000000006",
+                "10.254.1.21"
+              ]
+            ],
+            "mac_address": "fa:16:3e:6c:60:46",
+            "security_groups": [
+              "00000000-0000-4000-8000-000000000008"
+            ],
+            "status": "ACTIVE"
+          }
+        },
+        "power_state": "1",
+        "probe_ready": true,
+        "source_host": "compute-a",
+        "status": "active",
+        "task_state": null,
+        "task_state_cleared": true
+      },
+      {
+        "migration_ids": [],
+        "ports": {
+          "00000000-0000-4000-8000-000000000002": {
+            "binding_host": "compute-a",
+            "device_id": "00000000-0000-4000-8000-000000000001",
+            "fixed_ips": [
+              [
+                "00000000-0000-4000-8000-000000000005",
+                "fd00::104"
+              ]
+            ],
+            "mac_address": "fa:16:3e:37:99:ae",
+            "security_groups": [
+              "00000000-0000-4000-8000-000000000007"
+            ],
+            "status": "ACTIVE"
+          },
+          "00000000-0000-4000-8000-000000000003": {
+            "binding_host": "compute-a",
+            "device_id": "00000000-0000-4000-8000-000000000001",
+            "fixed_ips": [
+              [
+                "00000000-0000-4000-8000-000000000006",
+                "10.254.1.21"
+              ]
+            ],
+            "mac_address": "fa:16:3e:6c:60:46",
+            "security_groups": [
+              "00000000-0000-4000-8000-000000000008"
+            ],
+            "status": "ACTIVE"
+          }
+        },
+        "power_state": "1",
+        "probe_ready": true,
+        "source_host": "compute-a",
+        "status": "active",
+        "task_state": null,
+        "task_state_cleared": true
+      },
+      {
+        "migration_ids": [],
+        "ports": {
+          "00000000-0000-4000-8000-000000000002": {
+            "binding_host": "compute-a",
+            "device_id": "00000000-0000-4000-8000-000000000001",
+            "fixed_ips": [
+              [
+                "00000000-0000-4000-8000-000000000005",
+                "fd00::104"
+              ]
+            ],
+            "mac_address": "fa:16:3e:37:99:ae",
+            "security_groups": [
+              "00000000-0000-4000-8000-000000000007"
+            ],
+            "status": "ACTIVE"
+          },
+          "00000000-0000-4000-8000-000000000003": {
+            "binding_host": "compute-a",
+            "device_id": "00000000-0000-4000-8000-000000000001",
+            "fixed_ips": [
+              [
+                "00000000-0000-4000-8000-000000000006",
+                "10.254.1.21"
+              ]
+            ],
+            "mac_address": "fa:16:3e:6c:60:46",
+            "security_groups": [
+              "00000000-0000-4000-8000-000000000008"
+            ],
+            "status": "ACTIVE"
+          }
+        },
+        "power_state": "1",
+        "probe_ready": true,
+        "source_host": "compute-a",
+        "status": "active",
+        "task_state": null,
+        "task_state_cleared": true
+      }
+    ],
+    "stationary_endpoint": "IPv6 project networks on one router [az-a]:A"
+  },
+  "record_type": "operation",
+  "resource_ids": [
+    "00000000-0000-4000-8000-000000000001",
+    "00000000-0000-4000-8000-000000000003",
+    "00000000-0000-4000-8000-000000000002",
+    "00000000-0000-4000-8000-000000000004"
+  ],
+  "schema_version": 1,
+  "scope": {
+    "OS_AUTH_URL": "https://identity.example/v3",
+    "OS_INTERFACE": "internalURL",
+    "OS_PROJECT_DOMAIN_NAME": "Default",
+    "OS_PROJECT_NAME": "admin",
+    "OS_REGION_NAME": "region-a"
+  },
+  "scope_fingerprint": "recomputed-by-test",
+  "source_host": "compute-a",
+  "submitted": true,
+  "timestamp": "2026-10-17T07:51:20.626235Z",
+  "transaction_id": "migration-c1b62c386dc9479287ec4a0d5ffae199"
+}

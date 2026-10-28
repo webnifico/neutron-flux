@@ -1,0 +1,96 @@
+name: destructive-openstack-certification
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirmation:
+        description: Type DESTROY DISPOSABLE PROJECT to authorize live resource creation and deletion
+        required: true
+        type: string
+      cli_arguments:
+        description: Flux launch arguments, including image, flavor, storage and external networks
+        required: true
+        type: string
+      candidate_sha256:
+        description: SHA-256 of the exact reproducible source archive being certified
+        required: true
+        type: string
+      successful_runs:
+        description: Successful complete runs
+        required: true
+        default: '10'
+        type: string
+      interrupted_runs:
+        description: Phase-targeted SIGTERM runs
+        required: true
+        default: '10'
+        type: string
+      injected_runs:
+        description: Required failure-injection runs
+        required: true
+        default: '10'
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: neutron-flux-live-certification
+  cancel-in-progress: false
+
+jobs:
+  certify:
+    environment: neutron-flux-live-certification
+    runs-on: [self-hosted, openstack-neutron-flux]
+    timeout-minutes: 1440
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate destructive authorization and runner inputs
+        env:
+          CONFIRMATION: ${{ inputs.confirmation }}
+          CERTIFICATION_CLI_ARGUMENTS: ${{ inputs.cli_arguments }}
+          EXPECTED_CANDIDATE_SHA256: ${{ inputs.candidate_sha256 }}
+        run: |
+          test "$CONFIRMATION" = 'DESTROY DISPOSABLE PROJECT' || { echo 'Destructive certification was not explicitly authorized'; exit 1; }
+          openstack token issue -c project_id -f value >/dev/null || { echo 'OpenStack authentication failed on this runner'; exit 1; }
+          test -n "$CERTIFICATION_CLI_ARGUMENTS" || { echo "Certification CLI arguments are required"; exit 1; }
+          test "${#EXPECTED_CANDIDATE_SHA256}" -eq 64 || { echo 'Candidate SHA-256 must contain exactly 64 characters'; exit 1; }
+          case "$EXPECTED_CANDIDATE_SHA256" in *[!0-9a-fA-F]*) echo 'Candidate SHA-256 must be hexadecimal'; exit 1;; esac
+
+      - name: Rebuild and verify the exact candidate archive
+        env:
+          EXPECTED_CANDIDATE_SHA256: ${{ inputs.candidate_sha256 }}
+        run: |
+          ARTIFACT_DIR="${RUNNER_TEMP}/neutron-flux-live-certification"
+          mkdir -p "$ARTIFACT_DIR"
+          CANDIDATE_ARCHIVE=$(python3 support/scripts/build-release.py)
+          ACTUAL_CANDIDATE_SHA256=$(sha256sum "$CANDIDATE_ARCHIVE" | awk '{print $1}')
+          EXPECTED_CANDIDATE_SHA256=$(printf '%s' "$EXPECTED_CANDIDATE_SHA256" | tr 'A-F' 'a-f')
+          test "$ACTUAL_CANDIDATE_SHA256" = "$EXPECTED_CANDIDATE_SHA256" || { echo "Candidate archive mismatch: expected $EXPECTED_CANDIDATE_SHA256, rebuilt $ACTUAL_CANDIDATE_SHA256"; exit 1; }
+          cp "$CANDIDATE_ARCHIVE" "$ARTIFACT_DIR/"
+          echo "CERTIFICATION_CANDIDATE_ARCHIVE=${ARTIFACT_DIR}/$(basename "$CANDIDATE_ARCHIVE")" >> "$GITHUB_ENV"
+          echo "CERTIFICATION_CANDIDATE_SHA256=$ACTUAL_CANDIDATE_SHA256" >> "$GITHUB_ENV"
+
+      - name: Run destructive certification
+        env:
+          CERTIFICATION_CLI_ARGUMENTS: ${{ inputs.cli_arguments }}
+          SUCCESS_RUNS: ${{ inputs.successful_runs }}
+          INTERRUPTED_RUNS: ${{ inputs.interrupted_runs }}
+          INJECTED_RUNS: ${{ inputs.injected_runs }}
+          CERTIFICATION_OUTPUT_DIR: ${{ runner.temp }}/neutron-flux-live-certification
+        run: |
+          python3 - <<'PYTHON'
+          import os, runpy, shlex, sys
+          sys.argv = ["support/scripts/live-certify.py", *shlex.split(os.environ["CERTIFICATION_CLI_ARGUMENTS"])]
+          runpy.run_path(sys.argv[0], run_name="__main__")
+          PYTHON
+
+      - name: Upload certification evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: neutron-flux-live-certification-${{ github.run_id }}
+          path: ${{ runner.temp }}/neutron-flux-live-certification/
+          if-no-files-found: warn
+          retention-days: 30
